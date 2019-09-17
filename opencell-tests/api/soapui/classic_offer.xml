@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project activeEnvironment="Default" name="Classic offer" resourceRoot="${projectDir}" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" id="2e379382-059f-42f2-a263-3971d606356b" xmlns:con="http://eviware.com/soapui/config">
+<con:soapui-project activeEnvironment="Default" name="Classic offer" resourceRoot="${projectDir}" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" id="2e379382-059f-42f2-a263-3971d606356b" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
   <con:entry key="Environment" value="Default"/>
@@ -35,7 +35,7 @@
   </con:settings>
   <con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="CatalogWsSoapBinding" type="wsdl" bindingName="{http://impl.ws.api.meveo.org/}CatalogWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="${#Project#opencell.url}/CatalogWs?wsdl" id="21c1fb0e-ed84-4133-9d3e-82094b378947" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT"/><con:endpoints>
       <con:endpoint>http://localhost:8080/meveo/CatalogWs</con:endpoint>
     </con:endpoints>
     <con:operation isOneWay="false" action="" name="createCounterTemplate" bindingOperationName="createCounterTemplate" type="Request-Response" outputName="createCounterTemplateResponse" inputName="createCounterTemplate" receivesAttachments="false" sendsAttachments="false" anonymous="optional" id="6e828e4a-c533-4573-a2fe-77c2898a80c9">
@@ -344,7 +344,7 @@
   </con:interface>
   <con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="AccountWsSoapBinding" type="wsdl" bindingName="{http://impl.ws.api.meveo.org/}AccountWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="${#Project#opencell.url}/AccountWs?wsdl" id="8af58aca-6143-49ed-952e-8ab3b34bf0d4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT"/><con:endpoints>
       <con:endpoint>http://demo.meveo.info/meveo/AccountWs</con:endpoint>
       <con:endpoint>http://i.meveo.info/meveo/AccountWs</con:endpoint>
       <con:endpoint>http://localhost:8080/meveo/AccountWs</con:endpoint>
@@ -584,7 +584,7 @@
   </con:interface>
   <con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="SubscriptionWsSoapBinding" type="wsdl" bindingName="{http://impl.ws.api.meveo.org/}SubscriptionWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="${#Project#opencell.url}/SubscriptionWs?wsdl" id="9b2cc058-9937-4389-9d45-dcf284fa0358" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT"/><con:endpoints>
       <con:endpoint>http://i.meveo.info/meveo/SubscriptionWs</con:endpoint>
       <con:endpoint>http://jpv2.I.opencellsoft.com/meveo/SubscriptionWs</con:endpoint>
       <con:endpoint>http://localhost:8080/meveo/SubscriptionWs</con:endpoint>
@@ -625,7 +625,7 @@
   </con:interface>
   <con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="WalletWsSoapBinding" type="wsdl" bindingName="{http://impl.ws.api.meveo.org/}WalletWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="${#Project#opencell.url}/WalletWs?wsdl" id="f799ad81-8b34-4625-831f-f4f653bea480" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT"/><con:endpoints>
       <con:endpoint>http://i.meveo.info/meveo/WalletWs</con:endpoint>
       <con:endpoint>http://localhost:8080/meveo/WalletWs</con:endpoint>
     </con:endpoints>
@@ -677,7 +677,7 @@
   </con:interface>
   <con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="MediationWsSoapBinding" type="wsdl" bindingName="{http://impl.ws.api.meveo.org/}MediationWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="${#Project#opencell.url}/MediationWs?wsdl" id="6bd4d161-6e4d-493f-9d33-8b526e6c16a5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT"/><con:endpoints>
       <con:endpoint>http://demo.meveo.info/meveo/MediationWs</con:endpoint>
       <con:endpoint>http://i.meveo.info/meveo/MediationWs</con:endpoint>
       <con:endpoint>http://localhost:8080/meveo/MediationWs</con:endpoint>
@@ -703,7 +703,7 @@
   </con:interface>
   <con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="SettingsWsSoapBinding" type="wsdl" bindingName="{http://impl.ws.api.meveo.org/}SettingsWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="${#Project#opencell.url}/SettingsWs?wsdl" id="0f234374-b4df-4d6a-94fc-bcb97691a681" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT"/><con:endpoints>
       <con:endpoint>http://demo.meveo.info/meveo/SettingsWs</con:endpoint>
       <con:endpoint>http://i.meveo.info/meveo/SettingsWs</con:endpoint>
       <con:endpoint>http://integration.i.opencellsoft.com/meveo/SettingsWs</con:endpoint>
@@ -1094,7 +1094,7 @@
   </con:interface>
   <con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="JobWsSoapBinding" type="wsdl" bindingName="{http://impl.ws.api.meveo.org/}JobWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="${#Project#opencell.url}/JobWs?wsdl" id="0eb58c11-ce7f-44a5-bd1e-0a6aec7a9961" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT"/><con:endpoints>
       <con:endpoint>http://demo.meveo.info/meveo/JobWs</con:endpoint>
       <con:endpoint>http://i.meveo.info/meveo/JobWs</con:endpoint>
       <con:endpoint>http://localhost:8080/meveo/JobWs</con:endpoint>
@@ -1133,7 +1133,7 @@
   </con:interface>
   <con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="NotificationWsSoapBinding" type="wsdl" bindingName="{http://impl.ws.api.meveo.org/}NotificationWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="${#Project#opencell.url}/NotificationWs?wsdl" id="f0f7e27e-a1df-4dc1-a0fd-16ad7ef97f79" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT"/><con:endpoints>
       <con:endpoint>http://demo.meveo.info/meveo/NotificationWs</con:endpoint>
       <con:endpoint>http://i.meveo.info/meveo/NotificationWs</con:endpoint>
       <con:endpoint>http://localhost:8080/meveo/NotificationWs</con:endpoint>
@@ -1195,7 +1195,7 @@
   </con:interface>
   <con:interface xsi:type="con:WsdlInterface" id="38c203bc-70bb-4e60-b187-baa76b3b8359" wsaVersion="NONE" name="InvoiceWsSoapBinding" type="wsdl" bindingName="{http://impl.ws.api.meveo.org/}InvoiceWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="${#Project#opencell.url}/InvoiceWs?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT"/><con:endpoints>
       <con:endpoint>http://i.meveo.info/meveo/InvoiceWs</con:endpoint>
       <con:endpoint>http://localhost:8080/meveo/InvoiceWs</con:endpoint>
     </con:endpoints>
@@ -1226,7 +1226,7 @@
   </con:interface>
   <con:interface xsi:type="con:WsdlInterface" id="5e672655-5f83-45bd-a4ef-544fb2f1e1c1" wsaVersion="NONE" name="ScriptInstanceWsSoapBinding" type="wsdl" bindingName="{http://impl.ws.api.meveo.org/}ScriptInstanceWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="${#Project#opencell.url}/ScriptInstanceWs?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT"/><con:endpoints>
       <con:endpoint>http://demo.meveo.info/meveo/ScriptInstanceWs</con:endpoint>
     </con:endpoints>
     <con:operation id="b3f663b5-e096-4fc4-be9e-4d2d2ed16a61" isOneWay="false" action="" name="create" bindingOperationName="create" type="Request-Response" outputName="createResponse" inputName="create" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -1250,7 +1250,7 @@
   </con:interface>
   <con:interface xsi:type="con:WsdlInterface" id="7ea337bf-5239-40f7-8296-1545c8dc3097" wsaVersion="NONE" name="InvoicingWsSoapBinding" type="wsdl" bindingName="{http://impl.ws.api.meveo.org/}InvoicingWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="${#Project#opencell.url}/InvoicingWs?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT"/><con:endpoints>
       <con:endpoint>http://localhost:8080/meveo/InvoicingWs</con:endpoint>
     </con:endpoints>
     <con:operation id="01ca2ff0-e093-45ee-9558-473341191c5e" isOneWay="false" action="" name="cancelBillingRun" bindingOperationName="cancelBillingRun" type="Request-Response" outputName="cancelBillingRunResponse" inputName="cancelBillingRun" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -1280,7 +1280,1565 @@
   </con:interface>
   <con:interface xsi:type="con:WsdlInterface" id="ba5f98f2-b753-4f34-baf7-764ad91bb527" wsaVersion="NONE" name="SuperAdminSettingsWsSoapBinding" type="wsdl" bindingName="{http://superAdmin.ws.api.meveo.org/}SuperAdminSettingsWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="${#Project#opencell.url}/SuperAdminSettingsWs?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT" rootPart="http://localhost:8080/opencell/SuperAdminSettingsWs?wsdl"><con:part><con:url>http://localhost:8080/opencell/SuperAdminSettingsWs?wsdl</con:url><con:content><![CDATA[<wsdl:definitions name="SuperAdminSettingsWs" targetNamespace="http://superAdmin.ws.api.meveo.org/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://superAdmin.ws.api.meveo.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://ws.api.meveo.org/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.api.meveo.org/" xmlns:ns1="http://superAdmin.ws.api.meveo.org/">
+      <xs:import namespace="http://superAdmin.ws.api.meveo.org/"/>
+      <xs:element name="index" type="tns:index"/>
+      <xs:element name="indexResponse" type="tns:indexResponse"/>
+      <xs:complexType name="index">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="indexResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="ns1:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://superAdmin.ws.api.meveo.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ns0="http://ws.api.meveo.org/">
+      <xs:element name="AuditableEntity" type="tns:auditableEntityDto"/>
+      <xs:element name="BankCoordinates" type="tns:bankCoordinatesDto"/>
+      <xs:element name="CountryIso" type="tns:countryIsoDto"/>
+      <xs:element name="CurrencyIso" type="tns:currencyIsoDto"/>
+      <xs:element name="CustomEntityInstance" type="tns:customEntityInstanceDto"/>
+      <xs:element name="CustomField" type="tns:customFieldDto"/>
+      <xs:element name="CustomFieldValue" type="tns:customFieldValueDto"/>
+      <xs:element name="CustomFields" type="tns:customFieldsDto"/>
+      <xs:element name="EntityReference" type="tns:entityReferenceDto"/>
+      <xs:element name="GetCountriesIsoResponse" type="tns:getCountriesIsoResponse"/>
+      <xs:element name="GetCountryIsoResponse" type="tns:getCountryIsoResponse"/>
+      <xs:element name="GetCurrenciesIsoResponse" type="tns:getCurrenciesIsoResponse"/>
+      <xs:element name="GetCurrencyIsoResponse" type="tns:getCurrencyIsoResponse"/>
+      <xs:element name="GetFilesResponse" type="tns:getFilesResponseDto"/>
+      <xs:element name="GetLanguageIsoResponse" type="tns:getLanguageIsoResponse"/>
+      <xs:element name="GetLanguagesIsoResponse" type="tns:getLanguagesIsoResponse"/>
+      <xs:element name="GetProviderResponse" type="tns:getProviderResponse"/>
+      <xs:element name="InvoiceConfiguration" type="tns:invoiceConfigurationDto"/>
+      <xs:element name="LanguageDescription" type="tns:languageDescriptionDto"/>
+      <xs:element name="LanguageIso" type="tns:languageIsoDto"/>
+      <xs:element name="Provider" type="tns:providerDto"/>
+      <xs:element name="Providers" type="tns:providersDto"/>
+      <xs:element name="actionStatus" type="tns:actionStatus"/>
+      <xs:element name="auditableField" type="tns:auditableFieldDto"/>
+      <xs:element name="createCountry" type="tns:createCountry"/>
+      <xs:element name="createCountryResponse" type="tns:createCountryResponse"/>
+      <xs:element name="createCurrency" type="tns:createCurrency"/>
+      <xs:element name="createCurrencyResponse" type="tns:createCurrencyResponse"/>
+      <xs:element name="createDir" type="tns:createDir"/>
+      <xs:element name="createDirResponse" type="tns:createDirResponse"/>
+      <xs:element name="createLanguage" type="tns:createLanguage"/>
+      <xs:element name="createLanguageResponse" type="tns:createLanguageResponse"/>
+      <xs:element name="createOrUpdateCountry" type="tns:createOrUpdateCountry"/>
+      <xs:element name="createOrUpdateCountryResponse" type="tns:createOrUpdateCountryResponse"/>
+      <xs:element name="createOrUpdateCurrency" type="tns:createOrUpdateCurrency"/>
+      <xs:element name="createOrUpdateCurrencyResponse" type="tns:createOrUpdateCurrencyResponse"/>
+      <xs:element name="createOrUpdateLanguage" type="tns:createOrUpdateLanguage"/>
+      <xs:element name="createOrUpdateLanguageResponse" type="tns:createOrUpdateLanguageResponse"/>
+      <xs:element name="createOrUpdateProvider" type="tns:createOrUpdateProvider"/>
+      <xs:element name="createOrUpdateProviderResponse" type="tns:createOrUpdateProviderResponse"/>
+      <xs:element name="createProvider" type="tns:createProvider"/>
+      <xs:element name="createProviderResponse" type="tns:createProviderResponse"/>
+      <xs:element name="createTenant" type="tns:createTenant"/>
+      <xs:element name="createTenantResponse" type="tns:createTenantResponse"/>
+      <xs:element name="downloadFile" type="tns:downloadFile"/>
+      <xs:element name="downloadFileResponse" type="tns:downloadFileResponse"/>
+      <xs:element name="findCountry" type="tns:findCountry"/>
+      <xs:element name="findCountryResponse" type="tns:findCountryResponse"/>
+      <xs:element name="findCurrency" type="tns:findCurrency"/>
+      <xs:element name="findCurrencyResponse" type="tns:findCurrencyResponse"/>
+      <xs:element name="findLanguage" type="tns:findLanguage"/>
+      <xs:element name="findLanguageResponse" type="tns:findLanguageResponse"/>
+      <xs:element name="findProvider" type="tns:findProvider"/>
+      <xs:element name="findProviderResponse" type="tns:findProviderResponse"/>
+      <xs:element name="listAllFiles" type="tns:listAllFiles"/>
+      <xs:element name="listAllFilesResponse" type="tns:listAllFilesResponse"/>
+      <xs:element name="listFiles" type="tns:listFiles"/>
+      <xs:element name="listFilesResponse" type="tns:listFilesResponse"/>
+      <xs:element name="listIsoCountries" type="tns:listIsoCountries"/>
+      <xs:element name="listIsoCountriesResponse" type="tns:listIsoCountriesResponse"/>
+      <xs:element name="listIsoCurrencies" type="tns:listIsoCurrencies"/>
+      <xs:element name="listIsoCurrenciesResponse" type="tns:listIsoCurrenciesResponse"/>
+      <xs:element name="listIsoLanguages" type="tns:listIsoLanguages"/>
+      <xs:element name="listIsoLanguagesResponse" type="tns:listIsoLanguagesResponse"/>
+      <xs:element name="listTenants" type="tns:listTenants"/>
+      <xs:element name="listTenantsResponse" type="tns:listTenantsResponse"/>
+      <xs:element name="removeCountry" type="tns:removeCountry"/>
+      <xs:element name="removeCountryResponse" type="tns:removeCountryResponse"/>
+      <xs:element name="removeCurrency" type="tns:removeCurrency"/>
+      <xs:element name="removeCurrencyResponse" type="tns:removeCurrencyResponse"/>
+      <xs:element name="removeLanguage" type="tns:removeLanguage"/>
+      <xs:element name="removeLanguageResponse" type="tns:removeLanguageResponse"/>
+      <xs:element name="removeTenant" type="tns:removeTenant"/>
+      <xs:element name="removeTenantResponse" type="tns:removeTenantResponse"/>
+      <xs:element name="suppressDir" type="tns:suppressDir"/>
+      <xs:element name="suppressDirResponse" type="tns:suppressDirResponse"/>
+      <xs:element name="suppressFile" type="tns:suppressFile"/>
+      <xs:element name="suppressFileResponse" type="tns:suppressFileResponse"/>
+      <xs:element name="updateCountry" type="tns:updateCountry"/>
+      <xs:element name="updateCountryResponse" type="tns:updateCountryResponse"/>
+      <xs:element name="updateCurrency" type="tns:updateCurrency"/>
+      <xs:element name="updateCurrencyResponse" type="tns:updateCurrencyResponse"/>
+      <xs:element name="updateLanguage" type="tns:updateLanguage"/>
+      <xs:element name="updateLanguageResponse" type="tns:updateLanguageResponse"/>
+      <xs:element name="updateProvider" type="tns:updateProvider"/>
+      <xs:element name="updateProviderResponse" type="tns:updateProviderResponse"/>
+      <xs:element name="zipDir" type="tns:zipDir"/>
+      <xs:element name="zipDirResponse" type="tns:zipDirResponse"/>
+      <xs:element name="zipFile" type="tns:zipFile"/>
+      <xs:element name="zipFileResponse" type="tns:zipFileResponse"/>
+      <xs:complexType name="suppressDir">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dir" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="suppressDirResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="actionStatus">
+        <xs:sequence>
+          <xs:element name="status" type="tns:actionStatusEnum"/>
+          <xs:element minOccurs="0" name="errorCode" type="tns:meveoApiErrorCodeEnum"/>
+          <xs:element name="message" type="xs:string"/>
+          <xs:element minOccurs="0" name="entityId" type="xs:long"/>
+          <xs:element minOccurs="0" name="entityCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateLanguage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="languageIso" type="tns:languageIsoDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="languageIsoDto">
+        <xs:complexContent>
+          <xs:extension base="tns:baseEntityDto">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="description" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="code" type="xs:string" use="required"/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType abstract="true" name="baseEntityDto">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="updateLanguageResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="downloadFile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="file" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="downloadFileResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="listAllFiles">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="listAllFilesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:getFilesResponseDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getFilesResponseDto">
+        <xs:complexContent>
+          <xs:extension base="tns:baseResponse">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="files">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="file" type="tns:fileDto"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType abstract="true" name="baseResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="actionStatus" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="fileDto">
+        <xs:sequence>
+          <xs:element name="directory" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="lastModified" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="name" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="removeCurrency">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="currencyCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="removeCurrencyResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findCountry">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="countryIsoCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findCountryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:getCountryIsoResponse"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCountryIsoResponse">
+        <xs:complexContent>
+          <xs:extension base="tns:baseResponse">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="country" type="tns:countryIsoDto"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="countryIsoDto">
+        <xs:complexContent>
+          <xs:extension base="tns:baseEntityDto">
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" minOccurs="0" name="languageDescriptions" nillable="true" type="tns:languageDescriptionDto"/>
+              <xs:element name="currencyCode" type="xs:string"/>
+              <xs:element name="languageCode" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="countryCode" type="xs:string" use="required"/>
+            <xs:attribute name="description" type="xs:string"/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="languageDescriptionDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="languageCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="description" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="removeLanguage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="languageCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="removeLanguageResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createLanguage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="languageIso" type="tns:languageIsoDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createLanguageResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="listIsoCountries">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="listIsoCountriesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:getCountriesIsoResponse"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCountriesIsoResponse">
+        <xs:complexContent>
+          <xs:extension base="tns:baseResponse">
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" minOccurs="0" name="countries" nillable="true" type="tns:countryIsoDto"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="findLanguage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="languageCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findLanguageResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:getLanguageIsoResponse"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getLanguageIsoResponse">
+        <xs:complexContent>
+          <xs:extension base="tns:baseResponse">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="language" type="tns:languageIsoDto"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="listIsoLanguages">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="listIsoLanguagesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:getLanguagesIsoResponse"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getLanguagesIsoResponse">
+        <xs:complexContent>
+          <xs:extension base="tns:baseResponse">
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" minOccurs="0" name="languages" nillable="true" type="tns:languageIsoDto"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="suppressFile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="file" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="suppressFileResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateCountry">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="countryIso" type="tns:countryIsoDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateCountryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createCurrency">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="currencyIso" type="tns:currencyIsoDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="currencyIsoDto">
+        <xs:complexContent>
+          <xs:extension base="tns:baseEntityDto">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="description" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="code" type="xs:string" use="required"/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="createCurrencyResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createOrUpdateProvider">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="provider" type="tns:providerDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="providerDto">
+        <xs:complexContent>
+          <xs:extension base="tns:auditableEntityDto">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="description" type="xs:string"/>
+              <xs:element minOccurs="0" name="currency" type="xs:string"/>
+              <xs:element minOccurs="0" name="country" type="xs:string"/>
+              <xs:element minOccurs="0" name="language" type="xs:string"/>
+              <xs:element minOccurs="0" name="multiCurrency" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="multiCountry" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="multiLanguage" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="userAccount" type="xs:string"/>
+              <xs:element minOccurs="0" name="enterprise" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="levelDuplication" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="rounding" type="xs:int"/>
+              <xs:element minOccurs="0" name="roundingMode" type="tns:roundingModeEnum"/>
+              <xs:element name="invoiceRounding" type="xs:int"/>
+              <xs:element minOccurs="0" name="invoiceRoundingMode" type="tns:roundingModeEnum"/>
+              <xs:element minOccurs="0" name="prepaidReservationExpirationDelayinMillisec" type="xs:long"/>
+              <xs:element minOccurs="0" name="discountAccountingCode" type="xs:string"/>
+              <xs:element minOccurs="0" name="email" type="xs:string"/>
+              <xs:element minOccurs="0" name="bankCoordinates" type="tns:bankCoordinatesDto"/>
+              <xs:element minOccurs="0" name="recognizeRevenue" type="xs:boolean"/>
+              <xs:element minOccurs="0" name="invoiceConfiguration" type="tns:invoiceConfigurationDto"/>
+              <xs:element minOccurs="0" name="customFields" type="tns:customFieldsDto"/>
+            </xs:sequence>
+            <xs:attribute name="code" type="xs:string" use="required"/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType abstract="true" name="auditableEntityDto">
+        <xs:complexContent>
+          <xs:extension base="tns:baseEntityDto">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="auditable" type="tns:auditableDto"/>
+              <xs:element minOccurs="0" name="auditableFields">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="auditableField" type="tns:auditableFieldDto"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="bankCoordinatesDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bankCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="branchCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="accountNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="key" type="xs:string"/>
+          <xs:element minOccurs="0" name="iban" type="xs:string"/>
+          <xs:element minOccurs="0" name="bic" type="xs:string"/>
+          <xs:element minOccurs="0" name="accountOwner" type="xs:string"/>
+          <xs:element minOccurs="0" name="bankName" type="xs:string"/>
+          <xs:element minOccurs="0" name="bankId" type="xs:string"/>
+          <xs:element minOccurs="0" name="issuerNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="issuerName" type="xs:string"/>
+          <xs:element minOccurs="0" name="ics" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="invoiceConfigurationDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="displaySubscriptions" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="displayServices" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="displayOffers" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="displayEdrs" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="displayProvider" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="displayCfAsXML" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="displayPricePlans" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="displayDetail" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="displayChargesPeriods" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="displayBillingCycle" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="displayFreeTransacInInvoice" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="displayOrders" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="currentInvoiceNb" type="xs:long"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="customFieldsDto">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="customField" nillable="true" type="tns:customFieldDto"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="inheritedCustomField" nillable="true" type="tns:customFieldDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="customFieldDto">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="fieldType" type="tns:customFieldTypeEnum"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="languageDescriptions" nillable="true" type="tns:languageDescriptionDto"/>
+          <xs:element minOccurs="0" name="stringValue" type="xs:string"/>
+          <xs:element minOccurs="0" name="dateValue" type="xs:dateTime"/>
+          <xs:element minOccurs="0" name="longValue" type="xs:long"/>
+          <xs:element minOccurs="0" name="doubleValue" type="xs:double"/>
+          <xs:element minOccurs="0" name="booleanValue" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="listValue">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="value" type="tns:customFieldValueDto"/>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element name="mapValue">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="entry">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element minOccurs="0" name="key" type="xs:string"/>
+                      <xs:element minOccurs="0" name="value" type="tns:customFieldValueDto"/>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="entityReferenceValue" type="tns:entityReferenceDto"/>
+          <xs:element minOccurs="0" name="indexType" type="tns:customFieldIndexTypeEnum"/>
+          <xs:element minOccurs="0" name="fileValue" type="xs:string"/>
+          <xs:element minOccurs="0" name="formattedValue" type="tns:customFieldFormattedValueDto"/>
+          <xs:element minOccurs="0" name="guiPosition" type="xs:string"/>
+        </xs:sequence>
+        <xs:attribute name="code" type="xs:string" use="required"/>
+        <xs:attribute name="description" type="xs:string" use="required"/>
+        <xs:attribute name="valueDate" type="xs:dateTime"/>
+        <xs:attribute name="valuePeriodStartDate" type="xs:dateTime"/>
+        <xs:attribute name="valuePeriodEndDate" type="xs:dateTime"/>
+        <xs:attribute name="valuePeriodPriority" type="xs:int"/>
+      </xs:complexType>
+      <xs:complexType name="customFieldValueDto">
+        <xs:sequence>
+          <xs:choice minOccurs="0">
+            <xs:element name="dateValue" type="xs:dateTime"/>
+            <xs:element name="doubleValue" type="xs:double"/>
+            <xs:element name="longValue" type="xs:long"/>
+            <xs:element name="stringValue" type="xs:string"/>
+            <xs:element name="entityReferenceValue" type="tns:entityReferenceDto"/>
+            <xs:element name="childEntityValue" type="tns:customEntityInstanceDto"/>
+            <xs:element name="booleanValue" type="xs:boolean"/>
+          </xs:choice>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="entityReferenceDto">
+        <xs:sequence/>
+        <xs:attribute name="classname" type="xs:string" use="required"/>
+        <xs:attribute name="classnameCode" type="xs:string"/>
+        <xs:attribute name="code" type="xs:string" use="required"/>
+      </xs:complexType>
+      <xs:complexType name="customEntityInstanceDto">
+        <xs:complexContent>
+          <xs:extension base="tns:enableBusinessDto">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="customFields" type="tns:customFieldsDto"/>
+            </xs:sequence>
+            <xs:attribute name="cetCode" type="xs:string" use="required"/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType abstract="true" name="enableBusinessDto">
+        <xs:complexContent>
+          <xs:extension base="tns:auditableEntityDto">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="updatedCode" type="xs:string"/>
+              <xs:element minOccurs="0" name="disabled" type="xs:boolean"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:long"/>
+            <xs:attribute name="code" type="xs:string" use="required"/>
+            <xs:attribute name="description" type="xs:string"/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="auditableDto">
+        <xs:sequence/>
+        <xs:attribute name="created" type="xs:dateTime"/>
+        <xs:attribute name="updated" type="xs:dateTime"/>
+        <xs:attribute name="creator" type="xs:string"/>
+        <xs:attribute name="updater" type="xs:string"/>
+      </xs:complexType>
+      <xs:complexType name="auditableFieldDto">
+        <xs:complexContent>
+          <xs:extension base="tns:auditableEntityDto">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="updatedCode" type="xs:string"/>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:long"/>
+            <xs:attribute name="code" type="xs:string" use="required"/>
+            <xs:attribute name="description" type="xs:string"/>
+            <xs:attribute name="entityClass" type="xs:string"/>
+            <xs:attribute name="fieldName" type="xs:string"/>
+            <xs:attribute name="changeOrigin" type="xs:string"/>
+            <xs:attribute name="originName" type="xs:string"/>
+            <xs:attribute name="previousState" type="xs:string"/>
+            <xs:attribute name="currentState" type="xs:string"/>
+            <xs:attribute name="created" type="xs:string"/>
+            <xs:attribute name="actor" type="xs:string"/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="customFieldFormattedValueDto">
+        <xs:complexContent>
+          <xs:extension base="tns:auditableEntityDto">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="updatedCode" type="xs:string"/>
+              <xs:element minOccurs="0" name="singleValue" type="xs:string"/>
+              <xs:element maxOccurs="unbounded" minOccurs="0" name="listValue" type="xs:string"/>
+              <xs:element name="mapValue">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="entry">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element minOccurs="0" name="key" type="xs:string"/>
+                          <xs:element minOccurs="0" name="value" type="xs:string"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:long"/>
+            <xs:attribute name="code" type="xs:string" use="required"/>
+            <xs:attribute name="description" type="xs:string"/>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="createOrUpdateProviderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="removeCountry">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="countryCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="removeCountryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createTenant">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="provider" type="tns:providerDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createTenantResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findCurrency">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="currencyCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findCurrencyResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:getCurrencyIsoResponse"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCurrencyIsoResponse">
+        <xs:complexContent>
+          <xs:extension base="tns:baseResponse">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="currency" type="tns:currencyIsoDto"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="createOrUpdateLanguage">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="languageIso" type="tns:languageIsoDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createOrUpdateLanguageResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createProvider">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="provider" type="tns:providerDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createProviderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateCurrency">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="currencyIso" type="tns:currencyIsoDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateCurrencyResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="findProvider">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="findProviderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:getProviderResponse"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getProviderResponse">
+        <xs:complexContent>
+          <xs:extension base="tns:baseResponse">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="provider" type="tns:providerDto"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="listIsoCurrencies">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="listIsoCurrenciesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:getCurrenciesIsoResponse"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="getCurrenciesIsoResponse">
+        <xs:complexContent>
+          <xs:extension base="tns:baseResponse">
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" minOccurs="0" name="currencies" nillable="true" type="tns:currencyIsoDto"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="updateProvider">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="provider" type="tns:providerDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="updateProviderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createDir">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dir" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createDirResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="listFiles">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dir" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="listFilesResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:getFilesResponseDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createOrUpdateCurrency">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="currencyIso" type="tns:currencyIsoDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createOrUpdateCurrencyResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="zipDir">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dir" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="zipDirResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createCountry">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="countryIso" type="tns:countryIsoDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createCountryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="listTenants">
+        <xs:sequence/>
+      </xs:complexType>
+      <xs:complexType name="listTenantsResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:providersDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="providersDto">
+        <xs:complexContent>
+          <xs:extension base="tns:searchResponse">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="providers">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element maxOccurs="unbounded" minOccurs="0" name="provider" type="tns:providerDto"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType abstract="true" name="searchResponse">
+        <xs:complexContent>
+          <xs:extension base="tns:baseResponse">
+            <xs:sequence>
+              <xs:element minOccurs="0" name="paging" type="tns:pagingAndFiltering"/>
+            </xs:sequence>
+          </xs:extension>
+        </xs:complexContent>
+      </xs:complexType>
+      <xs:complexType name="pagingAndFiltering">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="fullTextFilter" type="xs:string"/>
+          <xs:element name="filters">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="entry">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element minOccurs="0" name="key" type="xs:string"/>
+                      <xs:element minOccurs="0" name="value" type="xs:anyType"/>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="fields" type="xs:string"/>
+          <xs:element minOccurs="0" name="offset" type="xs:int"/>
+          <xs:element minOccurs="0" name="limit" type="xs:int"/>
+          <xs:element minOccurs="0" name="sortBy" type="xs:string"/>
+          <xs:element minOccurs="0" name="sortOrder" type="tns:sortOrder"/>
+          <xs:element minOccurs="0" name="totalNumberOfRecords" type="xs:int"/>
+          <xs:element name="loadReferenceDepth" type="xs:int"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="removeTenant">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="providerCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="removeTenantResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="zipFile">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="file" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="zipFileResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createOrUpdateCountry">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="countryIso" type="tns:countryIsoDto"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createOrUpdateCountryResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="return" type="tns:actionStatus"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="actionStatusEnum">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="SUCCESS"/>
+          <xs:enumeration value="FAIL"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="meveoApiErrorCodeEnum">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="ENTITY_DOES_NOT_EXISTS_EXCEPTION"/>
+          <xs:enumeration value="ENTITY_NOT_ALLOWED_EXCEPTION"/>
+          <xs:enumeration value="ENTITY_ALREADY_EXISTS_EXCEPTION"/>
+          <xs:enumeration value="DELETE_REFERENCED_ENTITY_EXCEPTION"/>
+          <xs:enumeration value="MISSING_PARAMETER"/>
+          <xs:enumeration value="INVALID_PARAMETER"/>
+          <xs:enumeration value="INVALID_ENUM_VALUE"/>
+          <xs:enumeration value="DUPLICATE_ACCESS"/>
+          <xs:enumeration value="INSUFFICIENT_BALANCE"/>
+          <xs:enumeration value="GENERIC_API_EXCEPTION"/>
+          <xs:enumeration value="BUSINESS_API_EXCEPTION"/>
+          <xs:enumeration value="AUTHENTICATION_AUTHORIZATION_EXCEPTION"/>
+          <xs:enumeration value="ACTION_FORBIDDEN"/>
+          <xs:enumeration value="INVALID_IMAGE_DATA"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="roundingModeEnum">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NEAREST"/>
+          <xs:enumeration value="DOWN"/>
+          <xs:enumeration value="UP"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="customFieldTypeEnum">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="STRING"/>
+          <xs:enumeration value="DATE"/>
+          <xs:enumeration value="LONG"/>
+          <xs:enumeration value="DOUBLE"/>
+          <xs:enumeration value="LIST"/>
+          <xs:enumeration value="ENTITY"/>
+          <xs:enumeration value="TEXT_AREA"/>
+          <xs:enumeration value="CHILD_ENTITY"/>
+          <xs:enumeration value="MULTI_VALUE"/>
+          <xs:enumeration value="BOOLEAN"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="customFieldIndexTypeEnum">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="STORE_ONLY"/>
+          <xs:enumeration value="INDEX"/>
+          <xs:enumeration value="INDEX_NOT_ANALYZE"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="sortOrder">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="ASCENDING"/>
+          <xs:enumeration value="DESCENDING"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="index" nillable="true" type="ns0:index"/>
+      <xs:element name="indexResponse" nillable="true" type="ns0:indexResponse"/>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="updateCountryResponse">
+    <wsdl:part element="tns:updateCountryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateLanguage">
+    <wsdl:part element="tns:updateLanguage" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listAllFiles">
+    <wsdl:part element="tns:listAllFiles" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeCurrency">
+    <wsdl:part element="tns:removeCurrency" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCurrencyResponse">
+    <wsdl:part element="tns:updateCurrencyResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findCountry">
+    <wsdl:part element="tns:findCountry" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createOrUpdateProviderResponse">
+    <wsdl:part element="tns:createOrUpdateProviderResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeCountryResponse">
+    <wsdl:part element="tns:removeCountryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listTenantsResponse">
+    <wsdl:part element="tns:listTenantsResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateLanguageResponse">
+    <wsdl:part element="tns:updateLanguageResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listIsoLanguages">
+    <wsdl:part element="tns:listIsoLanguages" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listIsoCountriesResponse">
+    <wsdl:part element="tns:listIsoCountriesResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="suppressFile">
+    <wsdl:part element="tns:suppressFile" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCountry">
+    <wsdl:part element="tns:updateCountry" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createCurrency">
+    <wsdl:part element="tns:createCurrency" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createOrUpdateProvider">
+    <wsdl:part element="tns:createOrUpdateProvider" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findCurrency">
+    <wsdl:part element="tns:findCurrency" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findCurrencyResponse">
+    <wsdl:part element="tns:findCurrencyResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateCurrency">
+    <wsdl:part element="tns:updateCurrency" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findProviderResponse">
+    <wsdl:part element="tns:findProviderResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="zipFileResponse">
+    <wsdl:part element="tns:zipFileResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateProvider">
+    <wsdl:part element="tns:updateProvider" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="suppressDirResponse">
+    <wsdl:part element="tns:suppressDirResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createDir">
+    <wsdl:part element="tns:createDir" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listFilesResponse">
+    <wsdl:part element="tns:listFilesResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listFiles">
+    <wsdl:part element="tns:listFiles" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeTenantResponse">
+    <wsdl:part element="tns:removeTenantResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createOrUpdateCurrency">
+    <wsdl:part element="tns:createOrUpdateCurrency" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findCountryResponse">
+    <wsdl:part element="tns:findCountryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findLanguageResponse">
+    <wsdl:part element="tns:findLanguageResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createOrUpdateLanguageResponse">
+    <wsdl:part element="tns:createOrUpdateLanguageResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeTenant">
+    <wsdl:part element="tns:removeTenant" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createDirResponse">
+    <wsdl:part element="tns:createDirResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="suppressDir">
+    <wsdl:part element="tns:suppressDir" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="downloadFileResponse">
+    <wsdl:part element="tns:downloadFileResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="downloadFile">
+    <wsdl:part element="tns:downloadFile" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeLanguage">
+    <wsdl:part element="tns:removeLanguage" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="indexResponse">
+    <wsdl:part element="tns:indexResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createLanguage">
+    <wsdl:part element="tns:createLanguage" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listIsoCountries">
+    <wsdl:part element="tns:listIsoCountries" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateProviderResponse">
+    <wsdl:part element="tns:updateProviderResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeCurrencyResponse">
+    <wsdl:part element="tns:removeCurrencyResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findLanguage">
+    <wsdl:part element="tns:findLanguage" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listIsoLanguagesResponse">
+    <wsdl:part element="tns:listIsoLanguagesResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listAllFilesResponse">
+    <wsdl:part element="tns:listAllFilesResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createOrUpdateCurrencyResponse">
+    <wsdl:part element="tns:createOrUpdateCurrencyResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeCountry">
+    <wsdl:part element="tns:removeCountry" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="index">
+    <wsdl:part element="tns:index" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createTenant">
+    <wsdl:part element="tns:createTenant" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createOrUpdateLanguage">
+    <wsdl:part element="tns:createOrUpdateLanguage" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createProvider">
+    <wsdl:part element="tns:createProvider" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createLanguageResponse">
+    <wsdl:part element="tns:createLanguageResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createCountryResponse">
+    <wsdl:part element="tns:createCountryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listIsoCurrenciesResponse">
+    <wsdl:part element="tns:listIsoCurrenciesResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createCurrencyResponse">
+    <wsdl:part element="tns:createCurrencyResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findProvider">
+    <wsdl:part element="tns:findProvider" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listIsoCurrencies">
+    <wsdl:part element="tns:listIsoCurrencies" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="suppressFileResponse">
+    <wsdl:part element="tns:suppressFileResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="zipDirResponse">
+    <wsdl:part element="tns:zipDirResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createProviderResponse">
+    <wsdl:part element="tns:createProviderResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeLanguageResponse">
+    <wsdl:part element="tns:removeLanguageResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createTenantResponse">
+    <wsdl:part element="tns:createTenantResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="zipDir">
+    <wsdl:part element="tns:zipDir" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createOrUpdateCountryResponse">
+    <wsdl:part element="tns:createOrUpdateCountryResponse" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createCountry">
+    <wsdl:part element="tns:createCountry" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="listTenants">
+    <wsdl:part element="tns:listTenants" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="zipFile">
+    <wsdl:part element="tns:zipFile" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createOrUpdateCountry">
+    <wsdl:part element="tns:createOrUpdateCountry" name="parameters"></wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SuperAdminSettingsWs">
+    <wsdl:operation name="suppressDir">
+      <wsdl:input message="tns:suppressDir" name="suppressDir"></wsdl:input>
+      <wsdl:output message="tns:suppressDirResponse" name="suppressDirResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLanguage">
+      <wsdl:input message="tns:updateLanguage" name="updateLanguage"></wsdl:input>
+      <wsdl:output message="tns:updateLanguageResponse" name="updateLanguageResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadFile">
+      <wsdl:input message="tns:downloadFile" name="downloadFile"></wsdl:input>
+      <wsdl:output message="tns:downloadFileResponse" name="downloadFileResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listAllFiles">
+      <wsdl:input message="tns:listAllFiles" name="listAllFiles"></wsdl:input>
+      <wsdl:output message="tns:listAllFilesResponse" name="listAllFilesResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeCurrency">
+      <wsdl:input message="tns:removeCurrency" name="removeCurrency"></wsdl:input>
+      <wsdl:output message="tns:removeCurrencyResponse" name="removeCurrencyResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCountry">
+      <wsdl:input message="tns:findCountry" name="findCountry"></wsdl:input>
+      <wsdl:output message="tns:findCountryResponse" name="findCountryResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeLanguage">
+      <wsdl:input message="tns:removeLanguage" name="removeLanguage"></wsdl:input>
+      <wsdl:output message="tns:removeLanguageResponse" name="removeLanguageResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createLanguage">
+      <wsdl:input message="tns:createLanguage" name="createLanguage"></wsdl:input>
+      <wsdl:output message="tns:createLanguageResponse" name="createLanguageResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listIsoCountries">
+      <wsdl:input message="tns:listIsoCountries" name="listIsoCountries"></wsdl:input>
+      <wsdl:output message="tns:listIsoCountriesResponse" name="listIsoCountriesResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLanguage">
+      <wsdl:input message="tns:findLanguage" name="findLanguage"></wsdl:input>
+      <wsdl:output message="tns:findLanguageResponse" name="findLanguageResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listIsoLanguages">
+      <wsdl:input message="tns:listIsoLanguages" name="listIsoLanguages"></wsdl:input>
+      <wsdl:output message="tns:listIsoLanguagesResponse" name="listIsoLanguagesResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="suppressFile">
+      <wsdl:input message="tns:suppressFile" name="suppressFile"></wsdl:input>
+      <wsdl:output message="tns:suppressFileResponse" name="suppressFileResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCountry">
+      <wsdl:input message="tns:updateCountry" name="updateCountry"></wsdl:input>
+      <wsdl:output message="tns:updateCountryResponse" name="updateCountryResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createCurrency">
+      <wsdl:input message="tns:createCurrency" name="createCurrency"></wsdl:input>
+      <wsdl:output message="tns:createCurrencyResponse" name="createCurrencyResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createOrUpdateProvider">
+      <wsdl:input message="tns:createOrUpdateProvider" name="createOrUpdateProvider"></wsdl:input>
+      <wsdl:output message="tns:createOrUpdateProviderResponse" name="createOrUpdateProviderResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeCountry">
+      <wsdl:input message="tns:removeCountry" name="removeCountry"></wsdl:input>
+      <wsdl:output message="tns:removeCountryResponse" name="removeCountryResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="index">
+      <wsdl:input message="tns:index" name="index"></wsdl:input>
+      <wsdl:output message="tns:indexResponse" name="indexResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createTenant">
+      <wsdl:input message="tns:createTenant" name="createTenant"></wsdl:input>
+      <wsdl:output message="tns:createTenantResponse" name="createTenantResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCurrency">
+      <wsdl:input message="tns:findCurrency" name="findCurrency"></wsdl:input>
+      <wsdl:output message="tns:findCurrencyResponse" name="findCurrencyResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createOrUpdateLanguage">
+      <wsdl:input message="tns:createOrUpdateLanguage" name="createOrUpdateLanguage"></wsdl:input>
+      <wsdl:output message="tns:createOrUpdateLanguageResponse" name="createOrUpdateLanguageResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createProvider">
+      <wsdl:input message="tns:createProvider" name="createProvider"></wsdl:input>
+      <wsdl:output message="tns:createProviderResponse" name="createProviderResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCurrency">
+      <wsdl:input message="tns:updateCurrency" name="updateCurrency"></wsdl:input>
+      <wsdl:output message="tns:updateCurrencyResponse" name="updateCurrencyResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findProvider">
+      <wsdl:input message="tns:findProvider" name="findProvider"></wsdl:input>
+      <wsdl:output message="tns:findProviderResponse" name="findProviderResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listIsoCurrencies">
+      <wsdl:input message="tns:listIsoCurrencies" name="listIsoCurrencies"></wsdl:input>
+      <wsdl:output message="tns:listIsoCurrenciesResponse" name="listIsoCurrenciesResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateProvider">
+      <wsdl:input message="tns:updateProvider" name="updateProvider"></wsdl:input>
+      <wsdl:output message="tns:updateProviderResponse" name="updateProviderResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createDir">
+      <wsdl:input message="tns:createDir" name="createDir"></wsdl:input>
+      <wsdl:output message="tns:createDirResponse" name="createDirResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listFiles">
+      <wsdl:input message="tns:listFiles" name="listFiles"></wsdl:input>
+      <wsdl:output message="tns:listFilesResponse" name="listFilesResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createOrUpdateCurrency">
+      <wsdl:input message="tns:createOrUpdateCurrency" name="createOrUpdateCurrency"></wsdl:input>
+      <wsdl:output message="tns:createOrUpdateCurrencyResponse" name="createOrUpdateCurrencyResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zipDir">
+      <wsdl:input message="tns:zipDir" name="zipDir"></wsdl:input>
+      <wsdl:output message="tns:zipDirResponse" name="zipDirResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createCountry">
+      <wsdl:input message="tns:createCountry" name="createCountry"></wsdl:input>
+      <wsdl:output message="tns:createCountryResponse" name="createCountryResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listTenants">
+      <wsdl:input message="tns:listTenants" name="listTenants"></wsdl:input>
+      <wsdl:output message="tns:listTenantsResponse" name="listTenantsResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeTenant">
+      <wsdl:input message="tns:removeTenant" name="removeTenant"></wsdl:input>
+      <wsdl:output message="tns:removeTenantResponse" name="removeTenantResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zipFile">
+      <wsdl:input message="tns:zipFile" name="zipFile"></wsdl:input>
+      <wsdl:output message="tns:zipFileResponse" name="zipFileResponse"></wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createOrUpdateCountry">
+      <wsdl:input message="tns:createOrUpdateCountry" name="createOrUpdateCountry"></wsdl:input>
+      <wsdl:output message="tns:createOrUpdateCountryResponse" name="createOrUpdateCountryResponse"></wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SuperAdminSettingsWsSoapBinding" type="tns:SuperAdminSettingsWs">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="suppressDir">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="suppressDir">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="suppressDirResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateLanguage">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateLanguage">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateLanguageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="downloadFile">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="downloadFile">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="downloadFileResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeCurrency">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removeCurrency">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeCurrencyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listAllFiles">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listAllFiles">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listAllFilesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCountry">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findCountry">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findCountryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeLanguage">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removeLanguage">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeLanguageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createLanguage">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createLanguage">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createLanguageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listIsoCountries">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listIsoCountries">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listIsoCountriesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findLanguage">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findLanguage">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findLanguageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listIsoLanguages">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listIsoLanguages">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listIsoLanguagesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="suppressFile">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="suppressFile">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="suppressFileResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCountry">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateCountry">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateCountryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createCurrency">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createCurrency">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createCurrencyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createOrUpdateProvider">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createOrUpdateProvider">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createOrUpdateProviderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeCountry">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removeCountry">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeCountryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="index">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="index">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="indexResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createTenant">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createTenant">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createTenantResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findCurrency">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findCurrency">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findCurrencyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createOrUpdateLanguage">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createOrUpdateLanguage">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createOrUpdateLanguageResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createProvider">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createProvider">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createProviderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateCurrency">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateCurrency">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateCurrencyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findProvider">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findProvider">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findProviderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listIsoCurrencies">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listIsoCurrencies">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listIsoCurrenciesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateProvider">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateProvider">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateProviderResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createDir">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createDir">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createDirResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listFiles">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listFiles">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listFilesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createOrUpdateCurrency">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createOrUpdateCurrency">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createOrUpdateCurrencyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zipDir">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="zipDir">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="zipDirResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createCountry">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createCountry">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createCountryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="listTenants">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="listTenants">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="listTenantsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeTenant">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removeTenant">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeTenantResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="zipFile">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="zipFile">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="zipFileResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createOrUpdateCountry">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="createOrUpdateCountry">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="createOrUpdateCountryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SuperAdminSettingsWs">
+    <wsdl:port binding="tns:SuperAdminSettingsWsSoapBinding" name="SuperAdminSettingsWsImplPort">
+      <soap:address location="http://2de7b34c9ae9:8080/opencell/SuperAdminSettingsWs"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints>
       <con:endpoint>http://localhost:8080/meveo/SuperAdminSettingsWs</con:endpoint>
     </con:endpoints>
     <con:operation id="d31e2100-dbad-40f6-97ba-a21be91f3f06" isOneWay="false" action="" name="createCountry" bindingOperationName="createCountry" type="Request-Response" outputName="createCountryResponse" inputName="createCountry" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -1346,7 +2904,7 @@
   </con:interface>
   <con:interface xsi:type="con:WsdlInterface" id="0da7e377-c1a0-48f7-99a9-e1e9247de8ba" wsaVersion="NONE" name="EntityCustomizationWsSoapBinding" type="wsdl" bindingName="{http://impl.ws.api.meveo.org/}EntityCustomizationWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="${#Project#opencell.url}/EntityCustomizationWs?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT"/><con:endpoints>
       <con:endpoint>http://keepcool.i.opencellsoft.com/meveo/EntityCustomizationWs</con:endpoint>
     </con:endpoints>
     <con:operation id="83d88b58-fa89-4d42-a074-14f88e26b240" isOneWay="false" action="" name="createAction" bindingOperationName="createAction" type="Request-Response" outputName="createActionResponse" inputName="createAction" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -1421,7 +2979,7 @@
   </con:interface>
   <con:interface xsi:type="con:WsdlInterface" id="46c7a3e2-1f7a-4eba-82d6-658a290b9a92" wsaVersion="NONE" name="ModuleWsSoapBinding" type="wsdl" bindingName="{http://impl.ws.api.meveo.org/}ModuleWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="${#Project#opencell.url}/ModuleWs?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT"/><con:endpoints>
       <con:endpoint>http://127.0.0.1:8080/meveo/ModuleWs</con:endpoint>
       <con:endpoint>http://localhost:8080/meveo/ModuleWs</con:endpoint>
     </con:endpoints>
@@ -1461,11 +3019,11 @@
   </con:interface>
   <con:interface xsi:type="con:RestService" id="cbea8ecf-a6c3-4d0d-a813-222e3d4af5ee" wadlVersion="http://wadl.dev.java.net/2009/02" name="Classic offer" type="rest" definitionUrl="hierar" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints/>
+    <con:definitionCache/><con:endpoints/>
   </con:interface>
   <con:interface xsi:type="con:RestService" id="7959a799-a204-4db3-a820-bb959de54cab" wadlVersion="http://wadl.dev.java.net/2009/02" name="MEVEO JAX-WS API Documentation" type="rest" basePath="/api/rest" definitionUrl="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache/><con:endpoints>
       <con:endpoint>${#Project#meveoEndpoint}</con:endpoint>
     </con:endpoints>
     <con:resource name="/notification/jobTrigger" path="/notification/jobTrigger" id="5508eae1-6cce-432e-bff7-c93e068518d9">
@@ -15235,7 +16793,7 @@
   </con:interface>
   <con:interface xsi:type="con:WsdlInterface" id="2f007db2-1b88-4bd6-896c-dd70e703831d" wsaVersion="NONE" name="AccountingWsSoapBinding" type="wsdl" bindingName="{http://impl.ws.api.meveo.org/}AccountingWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="${#Project#opencell.url}/AccountingWs?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT"/><con:endpoints>
       <con:endpoint>http://localhost:8080/opencell/AccountingWs</con:endpoint>
     </con:endpoints>
     <con:operation id="e44c750e-c3b0-40d6-a981-4999da2f74bf" isOneWay="false" action="" name="createAccountingCode" bindingOperationName="createAccountingCode" type="Request-Response" outputName="createAccountingCodeResponse" inputName="createAccountingCode" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -15250,7 +16808,7 @@
   </con:interface>
   <con:interface xsi:type="con:WsdlInterface" id="35dcee6a-aeeb-48f6-bddc-b783e44b993f" wsaVersion="NONE" name="FilteredListWsSoapBinding" type="wsdl" bindingName="{http://impl.ws.api.meveo.org/}FilteredListWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="${#Project#opencell.url}/FilteredListWs?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT"/><con:endpoints>
       <con:endpoint>${#Project#opencell.url}/FilteredListWs</con:endpoint>
     </con:endpoints>
     <con:operation id="d203de4d-8e9f-4b9f-8b95-2468dcb41c09" isOneWay="false" action="" name="index" bindingOperationName="index" type="Request-Response" outputName="indexResponse" inputName="index" receivesAttachments="false" sendsAttachments="false" anonymous="optional">
@@ -15271,7 +16829,7 @@
   </con:interface>
   <con:interface xsi:type="con:WsdlInterface" id="e16cadb0-a036-4268-9e30-ac550f878c27" wsaVersion="NONE" name="PaymentWsSoapBinding" type="wsdl" bindingName="{http://impl.ws.api.meveo.org/}PaymentWsSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://127.0.0.1:8080/opencell/PaymentWs?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT"/><con:endpoints>
       <con:endpoint>${#Project#opencell.url}/PaymentWs</con:endpoint>
       <con:endpoint>http://localhost:8080/opencell/PaymentWs</con:endpoint>
     </con:endpoints>
@@ -15365,7 +16923,7 @@
   </con:interface>
   <con:interface xsi:type="con:RestService" id="16d5daa1-b2c5-49a8-8fa5-2ba9f7016982" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://${" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <con:settings/>
-    <con:endpoints>
+    <con:definitionCache type="TEXT" rootPart=""/><con:endpoints>
       <con:endpoint>http://${</con:endpoint>
     </con:endpoints>
     <con:resource name="" path="" id="8db38344-9a09-490d-b199-c2e4a755454b">
@@ -15908,7 +17466,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
          \r
          <customField code="CF_TEMPLATE_CODE" description="Template code">\r
             <fieldType>STRING</fieldType>\r
-            <appliesTo>OfferTemplate</appliesTo>\r
+            <appliesTo>OFFER</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>false</valueRequired>\r
             <versionable>false</versionable>\r
@@ -15958,7 +17516,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
          \r
          <customField code="CF_TEMPLATE_LABEL" description="Template label">\r
             <fieldType>STRING</fieldType>\r
-            <appliesTo>OfferTemplate</appliesTo>\r
+            <appliesTo>OFFER</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>false</valueRequired>\r
             <versionable>false</versionable>\r
@@ -16012,7 +17570,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
          \r
          <customField code="CF_PROVIDER_ADDR_NAME" description="Provider Address Name">\r
             <fieldType>STRING</fieldType>\r
-            <appliesTo>Seller</appliesTo>\r
+            <appliesTo>SELLER</appliesTo>\r
             <defaultValue>${#Project#providerAddrName}</defaultValue>
             <storageType>SINGLE</storageType>\r
             <valueRequired>false</valueRequired>\r
@@ -16063,7 +17621,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
          \r
          <customField code="CF_PROVIDER_ADDR_LINE1" description="Provider Address line 1">\r
             <fieldType>STRING</fieldType>\r
-            <appliesTo>Seller</appliesTo>\r
+            <appliesTo>SELLER</appliesTo>\r
             <defaultValue>${#Project#providerAddrLine1}</defaultValue>
             <storageType>SINGLE</storageType>\r
             <valueRequired>false</valueRequired>\r
@@ -16114,7 +17672,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
          \r
          <customField code="CF_PROVIDER_ADDR_LINE2" description="Provider Address line 2">\r
             <fieldType>STRING</fieldType>\r
-            <appliesTo>Seller</appliesTo>\r
+            <appliesTo>SELLER</appliesTo>\r
             <defaultValue>${#Project#providerAddrLine2}</defaultValue>
             <storageType>SINGLE</storageType>\r
             <valueRequired>false</valueRequired>\r
@@ -16165,7 +17723,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
          \r
          <customField code="CF_PROVIDER_ADDR_ZIP" description="Provider Address Zip code">\r
             <fieldType>STRING</fieldType>\r
-            <appliesTo>Seller</appliesTo>\r
+            <appliesTo>SELLER</appliesTo>\r
             <defaultValue>${#Project#providerAddrZip}</defaultValue>
             <storageType>SINGLE</storageType>\r
             <valueRequired>false</valueRequired>\r
@@ -16216,7 +17774,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
          \r
          <customField code="CF_PROVIDER_ADDR_CITY" description="Provider Address City">\r
             <fieldType>STRING</fieldType>\r
-            <appliesTo>Seller</appliesTo>\r
+            <appliesTo>SELLER</appliesTo>\r
             <defaultValue>${#Project#providerAddrCity}</defaultValue>
             <storageType>SINGLE</storageType>\r
             <valueRequired>false</valueRequired>\r
@@ -16267,7 +17825,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
          \r
          <customField code="CF_PROVIDER_ADDR_PHONE" description="Provider Address Phone">\r
             <fieldType>STRING</fieldType>\r
-            <appliesTo>Seller</appliesTo>\r
+            <appliesTo>SELLER</appliesTo>\r
             <defaultValue>${#Project#providerAddrPhone}</defaultValue>
             <storageType>SINGLE</storageType>\r
             <valueRequired>false</valueRequired>\r
@@ -16318,7 +17876,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
          \r
          <customField code="CF_PROVIDER_ADDR_EMAIL" description="Provider Address Email">\r
             <fieldType>STRING</fieldType>\r
-            <appliesTo>Seller</appliesTo>\r
+            <appliesTo>SELLER</appliesTo>\r
             <defaultValue>${#Project#providerAddrEmail}</defaultValue>
             <storageType>SINGLE</storageType>\r
             <valueRequired>false</valueRequired>\r
@@ -16376,7 +17934,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
    <soapenv:Body>
       <ws:findCustomFieldTemplate>
         <customFieldTemplateCode>CF_${#Project#templateCode}_PRICE_OS</customFieldTemplateCode>
-        <appliesTo>ServiceTemplate</appliesTo>
+        <appliesTo>SERVICE</appliesTo>
       </ws:findCustomFieldTemplate>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
@@ -16416,7 +17974,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_PRICE_OS" description="One-off price">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceTemplate</appliesTo>\r
+            <appliesTo>SERVICE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
             <defaultValue>30</defaultValue>\r
@@ -16467,7 +18025,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_VOLUME_PRICE_OS" description="Volume based pricing">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceTemplate</appliesTo>\r
+            <appliesTo>SERVICE</appliesTo>\r
             <storageType>MAP</storageType>\r
             <valueRequired>false</valueRequired>\r
             <versionable>false</versionable>\r
@@ -16518,7 +18076,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_PRICE_REC" description="Recurring price">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceTemplate</appliesTo>\r
+            <appliesTo>SERVICE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
             <defaultValue>10</defaultValue>\r
@@ -16569,7 +18127,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_VOLUME_PRICE_REC" description="Volume based pricing">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceTemplate</appliesTo>\r
+            <appliesTo>SERVICE</appliesTo>\r
             <storageType>MAP</storageType>\r
             <valueRequired>false</valueRequired>\r
             <versionable>false</versionable>\r
@@ -16621,7 +18179,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
          \r
          <customField code="CF_${#Project#templateCode}_PRICE_USG" description="Usage price per unit">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceTemplate</appliesTo>\r
+            <appliesTo>SERVICE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
 		  <defaultValue>0.1</defaultValue>
@@ -16672,7 +18230,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_VOLUME_PRICE_USG" description="Volume based pricing">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceTemplate</appliesTo>\r
+            <appliesTo>SERVICE</appliesTo>\r
             <storageType>MAP</storageType>\r
             <valueRequired>false</valueRequired>\r
             <versionable>false</versionable>\r
@@ -16723,7 +18281,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_PRICE_PRD" description="Product price">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ProductTemplate</appliesTo>\r
+            <appliesTo>PRODUCT</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
             <defaultValue>20</defaultValue>\r
@@ -16774,7 +18332,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_PLAN_QUANTITY_USG" description="Quantity included in plan">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceTemplate</appliesTo>\r
+            <appliesTo>SERVICE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
             <defaultValue>100</defaultValue>\r
@@ -16825,7 +18383,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_10TIERS_QUANTITY_USG" description="Thresholds for 10TIERS">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceTemplate</appliesTo>\r
+            <appliesTo>SERVICE</appliesTo>\r
             <storageType>MAP</storageType>\r
             <valueRequired>false</valueRequired>\r
             <versionable>false</versionable>\r
@@ -16876,7 +18434,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_10TIERS_PRICE_USG" description="Prices for 10TIERS">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceTemplate</appliesTo>\r
+            <appliesTo>SERVICE</appliesTo>\r
             <storageType>MAP</storageType>\r
             <valueRequired>false</valueRequired>\r
             <versionable>false</versionable>\r
@@ -16931,7 +18489,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_SELECTOR_TRIGGER_COMMISSION" description="Trigger commissioning">\r
             <fieldType>LIST</fieldType>\r
-            <appliesTo>ServiceTemplate</appliesTo>\r
+            <appliesTo>SERVICE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
             <versionable>false</versionable>\r
@@ -16993,7 +18551,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_COMMISSION_PARTNER" description="Commissioned partner account code">\r
             <fieldType>STRING</fieldType>\r
-            <appliesTo>ServiceTemplate</appliesTo>\r
+            <appliesTo>SERVICE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>false</valueRequired>\r
             <defaultValue>${#Project#provider}.partner.${#Project#templateCode}</defaultValue>\r
@@ -17044,7 +18602,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_COMMISSION_RATE" description="Commission rate (%)">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceTemplate</appliesTo>\r
+            <appliesTo>SERVICE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>false</valueRequired>\r
             <defaultValue>10</defaultValue>\r
@@ -17104,7 +18662,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_PRICE_OS" description="One-off price">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceInstance</appliesTo>\r
+            <appliesTo>SERVICE_INSTANCE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
             <defaultValue>30</defaultValue>\r
@@ -17155,7 +18713,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_VOLUME_PRICE_OS" description="Volume based pricing">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceInstance</appliesTo>\r
+            <appliesTo>SERVICE_INSTANCE</appliesTo>\r
             <storageType>MAP</storageType>\r
             <valueRequired>false</valueRequired>\r
             <versionable>false</versionable>\r
@@ -17206,7 +18764,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_PRICE_REC" description="Recurring price">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceInstance</appliesTo>\r
+            <appliesTo>SERVICE_INSTANCE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
             <defaultValue>10</defaultValue>\r
@@ -17257,7 +18815,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_VOLUME_PRICE_REC" description="Volume based pricing">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceInstance</appliesTo>\r
+            <appliesTo>SERVICE_INSTANCE</appliesTo>\r
             <storageType>MAP</storageType>\r
             <valueRequired>false</valueRequired>\r
             <versionable>false</versionable>\r
@@ -17308,7 +18866,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_PRICE_USG" description="Usage price per unit">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceInstance</appliesTo>\r
+            <appliesTo>SERVICE_INSTANCE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
             <defaultValue>0.1</defaultValue>\r
@@ -17359,7 +18917,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_VOLUME_PRICE_USG" description="Volume based pricing">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceInstance</appliesTo>\r
+            <appliesTo>SERVICE_INSTANCE</appliesTo>\r
             <storageType>MAP</storageType>\r
             <valueRequired>false</valueRequired>\r
             <versionable>false</versionable>\r
@@ -17410,7 +18968,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_PRICE_PRD" description="Product price">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ProductInstance</appliesTo>\r
+            <appliesTo>PRODUCT_INSTANCE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
             <defaultValue>20</defaultValue>\r
@@ -17461,7 +19019,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_PLAN_QUANTITY_USG" description="Quantity included in plan">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceInstance</appliesTo>\r
+            <appliesTo>SERVICE_INSTANCE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
             <defaultValue>100</defaultValue>\r
@@ -17512,7 +19070,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_10TIERS_QUANTITY_USG" description="Thresholds for 10TIERS">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceInstance</appliesTo>\r
+            <appliesTo>SERVICE_INSTANCE</appliesTo>\r
             <storageType>MAP</storageType>\r
             <valueRequired>false</valueRequired>\r
             <versionable>false</versionable>\r
@@ -17563,7 +19121,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_10TIERS_PRICE_USG" description="Prices for 10TIERS">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceInstance</appliesTo>\r
+            <appliesTo>SERVICE_INSTANCE</appliesTo>\r
             <storageType>MAP</storageType>\r
             <valueRequired>false</valueRequired>\r
             <versionable>false</versionable>\r
@@ -17618,7 +19176,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_SELECTOR_TRIGGER_COMMISSION" description="Trigger commissioning">\r
             <fieldType>LIST</fieldType>\r
-            <appliesTo>ServiceInstance</appliesTo>\r
+            <appliesTo>SERVICE_INSTANCE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
             <versionable>false</versionable>\r
@@ -17680,7 +19238,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_COMMISSION_PARTNER" description="Commissioned partner account code">\r
             <fieldType>STRING</fieldType>\r
-            <appliesTo>ServiceInstance</appliesTo>\r
+            <appliesTo>SERVICE_INSTANCE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>false</valueRequired>\r
             <defaultValue>${#Project#provider}.partner.${#Project#templateCode}</defaultValue>\r
@@ -17731,7 +19289,7 @@ for(testSuiteItem in  testCase.testSuite.project.getTestSuiteList()){
       <ws:createOrUpdateCustomFieldTemplate>\r
          <customField code="CF_${#Project#templateCode}_COMMISSION_RATE" description="Commission rate (%)">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceInstance</appliesTo>\r
+            <appliesTo>SERVICE_INSTANCE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>false</valueRequired>\r
             <defaultValue>10</defaultValue>\r
@@ -23561,8 +25119,8 @@ public class InvoiceCreateScript extends Script {
                   </script>
                   <customFieldTemplate code="MSD_USERNAME" description="Username for Microsoft Dynamics">
                      <fieldType>STRING</fieldType>
-                     <accountLevel>Provider</accountLevel>
-                     <appliesTo>Provider</appliesTo>
+                     <accountLevel>PROVIDER</accountLevel>
+                     <appliesTo>PROVIDER</appliesTo>
                      <storageType>SINGLE</storageType>
                      <valueRequired>false</valueRequired>
                      <versionable>false</versionable>
@@ -23575,8 +25133,8 @@ public class InvoiceCreateScript extends Script {
                   </customFieldTemplate>
                   <customFieldTemplate code="MSD_PASSWORD" description="Password for Microsoft Dynamics">
                      <fieldType>STRING</fieldType>
-                     <accountLevel>Provider</accountLevel>
-                     <appliesTo>Provider</appliesTo>
+                     <accountLevel>PROVIDER</accountLevel>
+                     <appliesTo>PROVIDER</appliesTo>
                      <storageType>SINGLE</storageType>
                      <valueRequired>false</valueRequired>
                      <versionable>false</versionable>
@@ -23589,8 +25147,8 @@ public class InvoiceCreateScript extends Script {
                   </customFieldTemplate>
                   <customFieldTemplate code="MSD_URL" description="URL for Microsoft Dynamics">
                      <fieldType>STRING</fieldType>
-                     <accountLevel>Provider</accountLevel>
-                     <appliesTo>Provider</appliesTo>
+                     <accountLevel>PROVIDER</accountLevel>
+                     <appliesTo>PROVIDER</appliesTo>
                      <storageType>SINGLE</storageType>
                      <valueRequired>false</valueRequired>
                      <versionable>false</versionable>
@@ -25318,7 +26876,7 @@ public class InvoiceXmlScript extends org.meveo.service.script.Script {
                </script>
                 <customFieldTemplate code="PROV_CUSTOM_INV_XML_SCRIPT_CODE" description="Custom invoice XML Script code">
                   <fieldType>STRING</fieldType>                  
-                  <appliesTo>Provider</appliesTo>
+                  <appliesTo>PROVIDER</appliesTo>                 
                   <storageType>SINGLE</storageType>
                   <valueRequired>false</valueRequired>                             
                   <cacheValue>true</cacheValue>                  
@@ -25635,7 +27193,7 @@ public class InvoiceXmlScript extends org.meveo.service.script.Script {
                </script>
                 <customFieldTemplate code="PROV_CUSTOM_INV_XML_SCRIPT_CODE" description="Custom invoice XML Script code">
                   <fieldType>STRING</fieldType>                  
-                  <appliesTo>Provider</appliesTo>
+                  <appliesTo>PROVIDER</appliesTo>                 
                   <storageType>SINGLE</storageType>
                   <valueRequired>false</valueRequired>                             
                   <cacheValue>true</cacheValue>  
@@ -25879,7 +27437,7 @@ public class SuspendSubscriptions extends org.meveo.service.script.Script {
     public void execute(Map<String, Object> initContext) throws BusinessException {
 
         AccountOperation ao = (AccountOperation)initContext.get("event");
-        if( ao.getCode().equals("CC_REJECT") ) {
+        if( ao.getOccCode().equals("CC_REJECT") ) {
             // browse BillingAccounts>UserAccounts, to get to the subscriptions
             int i = 0;
 
@@ -25907,12 +27465,12 @@ public class SuspendSubscriptions extends org.meveo.service.script.Script {
 
             String result = "Suspended " + i
                 + " subscriptions for Customer Account " + ao.getCustomerAccount().getCode() 
-                + " (reason : " + ao.getCode() + " - " + ao.getDescription() + ")";
+                + " (reason : " + ao.getOccCode() + " - " + ao.getOccDescription() + ")";
             log.info(result);
             initContext.put("result",result);
         }
         else {
-            String result = "Nothing to do (wrong OCC code : " + ao.getCode() + ", CustomerAccount : " + ao.getCustomerAccount().getCode() + ")";
+            String result = "Nothing to do (wrong OCC code : " + ao.getOccCode() + ", CustomerAccount : " + ao.getCustomerAccount().getCode() + ")";
             log.info(result);
             initContext.put("result",result);
         }
@@ -26063,8 +27621,8 @@ public class SuspendSubscriptions extends org.meveo.service.script.Script {
              <accountCode>ACCOUNT_CODE</accountCode>
              <accountCodeClientSide>CLIENT_ACCOUNT_CODE</accountCodeClientSide>
              <amount>10</amount>
-             <code>CC_REJECT</code>
-             <description>[API] Test CC Reject</description>
+             <occCode>CC_REJECT</occCode>
+             <occDescription>[API] Test CC Reject</occDescription>
           </accountOperation>
       </ws:createAccountOperation>
    </soapenv:Body>
@@ -26953,7 +28511,7 @@ public class CustWFAdvance extends org.meveo.service.script.Script {
          
          <actionCode>BTN_ADVANCE_WF</actionCode>
          
-         <appliesTo>Customer</appliesTo>
+         <appliesTo>CUST</appliesTo>
       </ws:findAction>
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
@@ -27013,7 +28571,7 @@ public class CustWFAdvance extends org.meveo.service.script.Script {
          \r
          <customField code="CF_REBATE_PRICE_REC" description="Rebate amount">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceTemplate</appliesTo>\r
+            <appliesTo>SERVICE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
 		  <defaultValue>20</defaultValue>
@@ -27065,8 +28623,8 @@ public class CustWFAdvance extends org.meveo.service.script.Script {
          \r
          <customField code="CF_REBATE_DURATION_SELECT" description="Rebate duration (months)">\r
             <fieldType>LIST</fieldType>
-            <accountLevel>ServiceTemplate</accountLevel>
-            <appliesTo>ServiceTemplate</appliesTo>
+            <accountLevel>SERVICE</accountLevel>
+            <appliesTo>SERVICE</appliesTo>
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
             <versionable>false</versionable>\r
@@ -27136,7 +28694,7 @@ public class CustWFAdvance extends org.meveo.service.script.Script {
          \r
          <customField code="CF_REBATE_PRICE_REC" description="Rebate amount">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceInstance</appliesTo>\r
+            <appliesTo>SERVICE_INSTANCE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
 		  <defaultValue>20</defaultValue>
@@ -27188,8 +28746,8 @@ public class CustWFAdvance extends org.meveo.service.script.Script {
          \r
          <customField code="CF_REBATE_DURATION_SELECT" description="Rebate duration (months)">\r
             <fieldType>LIST</fieldType>
-            <accountLevel>ServiceTemplate</accountLevel>
-            <appliesTo>ServiceInstance</appliesTo>
+            <accountLevel>SERVICE</accountLevel>
+            <appliesTo>SERVICE_INSTANCE</appliesTo>
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
             <versionable>false</versionable>\r
@@ -39591,6 +41149,20 @@ public class ForgotPassword extends ModuleScript{
                </entry>
             </scriptParams>
          </notification>	
+			<emailNotif code="ForgotPasswordEmailNotif">
+				<classNameFilter>org.meveo.model.admin.User</classNameFilter>
+				<eventTypeFilter>UPDATED</eventTypeFilter>
+				<emailFrom>bot@opencellsoft.com</emailFrom> 
+				<subject>Password reset</subject>
+				<emailToEl>#{event.email}</emailToEl>
+				<elFilter>#{event.newPassword ne null}</elFilter>
+				<body>Bonjour,
+				Text modifiable
+				user name  :  #{event.userName}
+				password   :  #{event.newPassword}
+				access url :  http://i.meveo.info/meveo/frontend/DEMO/index.html
+				</body>
+				</emailNotif>          
             </moduleItems>
          </module>
       </ws:createOrUpdate>
@@ -39764,44 +41336,6 @@ public class CreateAccess extends ModuleScript {
     </con:testCase>
     <con:testCase failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Create Selfcare BAM" searchProperties="true" id="a71c38ad-867c-4dab-849b-03b0d0791d4d">
       <con:settings/>
-      <con:testStep type="request" name="Remove BAM" id="83cd9856-1313-4b1a-94e3-bc2ed209cb87">
-        <con:settings/>
-        <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-          <con:interface>ModuleWsSoapBinding</con:interface>
-          <con:operation>uninstallModule</con:operation>
-          <con:request name="Remove BAM" id="ae71f5ba-1494-4691-99b6-9c8c742f05b9">
-            <con:settings>
-              <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;entry key="Authorization" value="Basic b3BlbmNlbGwuYWRtaW46b3BlbmNlbGwuYWRtaW4=" xmlns="http://eviware.com/soapui/config"/></con:setting>
-            </con:settings>
-            <con:encoding>UTF-8</con:encoding>
-            <con:endpoint>${#Project#opencell.url}/ModuleWs</con:endpoint>
-            <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="http://ws.api.meveo.org/">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:delete>
-         <code>Client</code>
-      </ws:delete>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request>
-            <con:assertion type="SOAP Response" id="a6b29958-f25b-4ddb-8432-0ef3f0f03ea4"/>
-            <con:assertion type="Simple Contains" id="8f727087-147b-467d-8b41-1193cde90b2b" name="Contains">
-              <con:configuration>
-                <token>&lt;status>SUCCESS&lt;/status></token>
-                <ignoreCase>false</ignoreCase>
-                <useRegEx>false</useRegEx>
-              </con:configuration>
-            </con:assertion>
-            <con:credentials>
-              <con:preemptive>true</con:preemptive>
-              <con:authType>No Authorization</con:authType>
-            </con:credentials>
-            <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-            <con:jmsPropertyConfig/>
-            <con:wsaConfig mustUnderstand="NONE" version="200508"/>
-            <con:wsrmConfig version="1.2"/>
-          </con:request>
-        </con:config>
-      </con:testStep>
       <con:testStep type="request" name="BAM Script" id="ddf31545-e576-4147-8dd8-0ed28a4f4c73">
         <con:settings/>
         <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -39893,8 +41427,19 @@ public class RegisterHierarchy extends org.meveo.service.script.Script {
       <ws:createBusinessAccountModel>
          
          <businessAccountModelDto code="Client" license="GPL" description="Individual customer">
-         	<hierarchyType>C_UA</hierarchyType>
           <moduleItems>
+			<emailNotif code="AccountCreationNotif">
+				<classNameFilter>org.meveo.model.admin.User</classNameFilter>
+				<eventTypeFilter>CREATED</eventTypeFilter>
+				<emailFrom>bot@opencellsoft.com</emailFrom> 
+				<subject>Account creation confirmation</subject>
+				<emailToEl>#{event.email}</emailToEl>
+				<body>Hello,
+                Your login has been created:
+                user name :  #{event.userName}
+                access url : http://integration.i.opencellsoft.com/opencell/frontend/DEMO/cc/index.html
+				</body> 
+			</emailNotif>
          <notification code="SelfcareRegistration">
             <classNameFilter>org.meveo.model.notification.InboundRequest</classNameFilter>
             <eventTypeFilter>INBOUND_REQ</eventTypeFilter>
@@ -40075,7 +41620,7 @@ public class SelfcareAccountScript extends AccountScript {
    <soapenv:Header/>
    <soapenv:Body>
       <ws:installModule>
-         <module code="Client" description="Individual customer" license="GPL">   
+         <module code="Client">   
          </module>
       </ws:installModule>
    </soapenv:Body>
@@ -40256,6 +41801,20 @@ public class ForgotPassword extends ModuleScript{
                </entry>
             </scriptParams>
          </notification>
+			<emailNotif code="ForgotPasswordEmailNotif">
+				<classNameFilter>org.meveo.model.admin.User</classNameFilter>
+				<eventTypeFilter>UPDATED</eventTypeFilter>
+				<emailFrom>bot@opencellsoft.com</emailFrom>
+				<subject>Password reset</subject>
+				<emailToEl>#{event.email}</emailToEl>
+				<elFilter>#{event.newPassword ne null}</elFilter>
+				<body>Bonjour,
+				Text modifiable
+				user name  :  #{event.userName}
+				password   :  #{event.newPassword}
+				access url :  http://i.meveo.info/meveo/frontend/DEMO/index.html
+				</body>
+				</emailNotif>
             </moduleItems>
          </module>
       </ws:createOrUpdate>
@@ -40811,6 +42370,20 @@ public class ForgotPassword extends ModuleScript{
                </entry>
             </scriptParams>
          </notification>
+			<emailNotif code="ForgotPasswordEmailNotif">
+				<classNameFilter>org.meveo.model.admin.User</classNameFilter>
+				<eventTypeFilter>UPDATED</eventTypeFilter>
+				<emailFrom>bot@opencellsoft.com</emailFrom>
+				<subject>Password reset</subject>
+				<emailToEl>#{event.email}</emailToEl>
+				<elFilter>#{event.newPassword ne null}</elFilter>
+				<body>Bonjour,
+				Text modifiable
+				user name  :  #{event.userName}
+				password   :  #{event.newPassword}
+				access url :  http://i.meveo.info/meveo/frontend/DEMO/index.html
+				</body>
+				</emailNotif>
             </moduleItems>
          </module>
       </ws:createOrUpdate>
@@ -41164,6 +42737,20 @@ public class ForgotPassword extends ModuleScript{
                </entry>
             </scriptParams>
          </notification>
+			<emailNotif code="ForgotPasswordEmailNotif">
+				<classNameFilter>org.meveo.model.admin.User</classNameFilter>
+				<eventTypeFilter>UPDATED</eventTypeFilter>
+				<emailFrom>bot@opencellsoft.com</emailFrom>
+				<subject>Password reset</subject>
+				<emailToEl>#{event.email}</emailToEl>
+				<elFilter>#{event.newPassword ne null}</elFilter>
+				<body>Bonjour,
+				Text modifiable
+				user name  :  #{event.userName}
+				password   :  #{event.newPassword}
+				access url :  http://i.meveo.info/meveo/frontend/DEMO/index.html
+				</body>
+				</emailNotif>
             </moduleItems>
          </module>
       </ws:createOrUpdate>
@@ -41542,7 +43129,7 @@ public class ForgotPassword extends ModuleScript{
    <soapenv:Body>\r
       <ws:createOrUpdateCRMAccountHierarchy>\r
          <crmAccountHierarchy>\r
-            <crmAccountType>Client</crmAccountType>\r
+            <crmAccountType>client</crmAccountType>\r
             <crmParentCode>${#Project#templateCode}_PARTNER</crmParentCode>\r
             <code>${#TestSuite#CUST}</code>\r
             <description>${#TestSuite#firstname} ${#TestSuite#lastname}</description>\r
@@ -42325,7 +43912,7 @@ public class ForgotPassword extends ModuleScript{
                 <useRegEx>false</useRegEx>
               </con:configuration>
             </con:assertion>
-            <con:credentials>
+            <con:assertion type="JsonPath Existence Match" id="15800c1a-2004-49f0-a223-84ca415f6fff" name="JsonPath Existence Match"><con:configuration/></con:assertion><con:credentials>
               <con:preemptive>true</con:preemptive>
               <con:authType>No Authorization</con:authType>
             </con:credentials>
@@ -42353,7 +43940,7 @@ public class ForgotPassword extends ModuleScript{
       </con:property>
       <con:property>
         <con:name>THIS_MONTH</con:name>
-        <con:value>2018-11</con:value>
+        <con:value>2019-10</con:value>
       </con:property>
       <con:property>
         <con:name>firstname</con:name>
@@ -42654,7 +44241,7 @@ public class ForgotPassword extends ModuleScript{
    <soapenv:Header/>
    <soapenv:Body>
       <ws:chargeCdr>
-         <cdr>${#TestSuite#FIRST_MONTH}-15T01:00:00.000Z;1;${#TestSuite#CUST};UNIT</cdr>
+         <cdr>${#TestSuite#FIRST_MONTH}-21T07:00:00.000Z;3;${#TestSuite#CUST};UNIT</cdr>
       </ws:chargeCdr>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
@@ -44207,7 +45794,7 @@ public class ForgotPassword extends ModuleScript{
       <ws:createAccountOperation>
       	<accountOperation>
 		  <customerAccount>${#TestSuite#CUST}</customerAccount>
-		  <description>Payment for ${#TestSuite#invoice1_number}</description>
+		  <occDescription>Payment for ${#TestSuite#invoice1_number}</occDescription>
 		  <amount>${#TestSuite#invoice1_amount}</amount>
 		  <unMatchingAmount>${#TestSuite#invoice1_amount}</unMatchingAmount>
 		  <dueDate>${#TestSuite#LAST_MONTH}-01</dueDate>
@@ -44217,7 +45804,7 @@ public class ForgotPassword extends ModuleScript{
 		  <reference>${#TestSuite#invoice1_number}</reference>
 		  <accountCode>90590_41115_00000_000_0000_00000000_00000</accountCode>
 		  <accountCodeClientSide>90590,51214170,00000,000,0000,00000000,00000</accountCodeClientSide>
-		  <code>RG_PLVT</code>
+		  <occCode>RG_PLVT</occCode>
 		  <otherCreditAndCharge>
 		    <operationDate>${#TestSuite#THIS_MONTH}-10</operationDate>
 		  </otherCreditAndCharge>
@@ -44262,14 +45849,14 @@ public class ForgotPassword extends ModuleScript{
       <ws:createAccountOperation>
       	<accountOperation>
 		  <customerAccount>${#TestSuite#CUST}</customerAccount>
-		  <description>Undue payment</description>
+		  <occDescription>Undue payment</occDescription>
 		  <amount>50</amount>
 		  <unMatchingAmount>50</unMatchingAmount>
 		  <type>OCC</type>
 		  <transactionDate>${#TestSuite#THIS_MONTH}-11</transactionDate>
 		  <transactionCategory>CREDIT</transactionCategory>
 		  <reference>NO_REF</reference>
-		  <code>RG_CHQ</code>
+		  <occCode>RG_CHQ</occCode>
 		  <otherCreditAndCharge>
 		    <operationDate>${#TestSuite#THIS_MONTH}-11</operationDate>
 		  </otherCreditAndCharge>
@@ -44314,14 +45901,14 @@ public class ForgotPassword extends ModuleScript{
       <ws:createAccountOperation>
       	<accountOperation>
 		  <customerAccount>${#TestSuite#CUST}</customerAccount>
-		  <description>Refund undue payment</description>
+		  <occDescription>Refund undue payment</occDescription>
 		  <amount>50</amount>
 		  <unMatchingAmount>50</unMatchingAmount>
 		  <type>OCC</type>
 		  <transactionDate>${#TestSuite#THIS_MONTH}-12</transactionDate>
 		  <transactionCategory>DEBIT</transactionCategory>
 		  <reference>NO_REF</reference>
-		  <code>RG_CHQ</code>
+		  <occCode>RG_CHQ</occCode>
 		  <otherCreditAndCharge>
 		    <operationDate>${#TestSuite#THIS_MONTH}-12</operationDate>
 		  </otherCreditAndCharge>
@@ -44366,7 +45953,7 @@ public class ForgotPassword extends ModuleScript{
       <ws:createAccountOperation>
       	<accountOperation>
 		  <customerAccount>${#TestSuite#CUST}</customerAccount>
-		  <description>Payment for ${#TestSuite#invoice2_number}</description>
+		  <occDescription>Payment for ${#TestSuite#invoice2_number}</occDescription>
 		  <amount>${#TestSuite#invoice2_amount}</amount>
 		  <unMatchingAmount>${#TestSuite#invoice2_amount}</unMatchingAmount>
 		  <dueDate>${#TestSuite#THIS_MONTH}-01</dueDate>
@@ -44376,7 +45963,7 @@ public class ForgotPassword extends ModuleScript{
 		  <reference>${#TestSuite#invoice2_number}</reference>
 		  <accountCode>90590_41115_00000_000_0000_00000000_00000</accountCode>
 		  <accountCodeClientSide>90590,51214170,00000,000,0000,00000000,00000</accountCodeClientSide>
-		  <code>RG_PLVT</code>
+		  <occCode>RG_PLVT</occCode>
 		  <otherCreditAndCharge>
 		    <operationDate>${#TestSuite#THIS_MONTH}-10</operationDate>
 		  </otherCreditAndCharge>
@@ -44540,7 +46127,7 @@ public class ForgotPassword extends ModuleScript{
       </con:property>
       <con:property>
         <con:name>invoice1_amount</con:name>
-        <con:value>90.000000000000</con:value>
+        <con:value>47</con:value>
       </con:property>
       <con:property>
         <con:name>invoice2_number</con:name>
@@ -44548,7 +46135,7 @@ public class ForgotPassword extends ModuleScript{
       </con:property>
       <con:property>
         <con:name>invoice2_amount</con:name>
-        <con:value>26.000000000000</con:value>
+        <con:value>14</con:value>
       </con:property>
     </con:properties>
   </con:testSuite>
@@ -45431,7 +47018,7 @@ public class ForgotPassword extends ModuleScript{
          \r
          <customField code="CF_SERVICE_PRICE_OS" description="Price at service level">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceTemplate</appliesTo>\r
+            <appliesTo>SERVICE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
 		  <defaultValue>10</defaultValue>
@@ -45483,7 +47070,7 @@ public class ForgotPassword extends ModuleScript{
          \r
          <customField code="CF_OFFER_PRICE_OS" description="Price at offer level">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>OfferTemplate</appliesTo>\r
+            <appliesTo>OFFER</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
 		  <defaultValue>20</defaultValue>
@@ -45535,7 +47122,7 @@ public class ForgotPassword extends ModuleScript{
          \r
          <customField code="CF_OFFER_PRICE_OS" description="Price at subscription level">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>Subscription</appliesTo>\r
+            <appliesTo>SUB</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
 		  <defaultValue>22</defaultValue>
@@ -57676,7 +59263,7 @@ select
          \r
          <customField code="CF_MQ_MRR_OFFER_LABELS" description="MRR Offer Labels">\r
             <fieldType>STRING</fieldType>\r
-            <appliesTo>Provider</appliesTo>\r
+            <appliesTo>PROVIDER</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
             <maxValue>1000</maxValue>
@@ -59772,7 +61359,7 @@ select
    <soapenv:Body>
       <ws:findCustomFieldTemplate>
         <customFieldTemplateCode>CF_TICKETS_SEQ</customFieldTemplateCode>
-        <appliesTo>Provider</appliesTo>
+        <appliesTo>PROVIDER</appliesTo>
       </ws:findCustomFieldTemplate>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
@@ -59813,8 +61400,8 @@ select
          \r
             <customField code="CF_TICKETS_SEQ" description="Ticket sequence">
                <fieldType>LONG</fieldType>
-               <accountLevel>Provider</accountLevel>
-               <appliesTo>Provider</appliesTo>
+               <accountLevel>PROVIDER</accountLevel>
+               <appliesTo>PROVIDER</appliesTo>
                <defaultValue>0</defaultValue>
                <storageType>SINGLE</storageType>
                <valueRequired>false</valueRequired>
@@ -59865,8 +61452,8 @@ select
          \r
             <customField code="CF_EVENTS_SEQ" description="Event sequence">
                <fieldType>LONG</fieldType>
-               <accountLevel>Provider</accountLevel>
-               <appliesTo>Provider</appliesTo>
+               <accountLevel>PROVIDER</accountLevel>
+               <appliesTo>PROVIDER</appliesTo>
                <defaultValue>0</defaultValue>
                <storageType>SINGLE</storageType>
                <valueRequired>false</valueRequired>
@@ -59926,8 +61513,8 @@ select
          \r
          <customField code="CF_${#Project#templateCode}_REC_SELECTOR_FLAT_Prorata_Subscription" description="Prorated at subscription">\r
                <fieldType>LIST</fieldType>
-               <accountLevel>ServiceTemplate</accountLevel>
-               <appliesTo>ServiceTemplate</appliesTo>
+               <accountLevel>SERVICE</accountLevel>
+               <appliesTo>SERVICE</appliesTo>
                <storageType>SINGLE</storageType>
                <valueRequired>true</valueRequired>
                <versionable>false</versionable>
@@ -59990,8 +61577,8 @@ select
          \r
            <customField code="CF_${#Project#templateCode}_REC_SELECTOR_FLAT_Prorata_Termination" description="Prorated at Termination">
                <fieldType>LIST</fieldType>
-               <accountLevel>ServiceTemplate</accountLevel>
-               <appliesTo>ServiceTemplate</appliesTo>
+               <accountLevel>SERVICE</accountLevel>
+               <appliesTo>SERVICE</appliesTo>
                <storageType>SINGLE</storageType>
                <valueRequired>true</valueRequired>
                <versionable>false</versionable>
@@ -60054,8 +61641,8 @@ select
          \r
            <customField code="CF_${#Project#templateCode}_REC_SELECTOR_FLAT_Agreement" description="Agreement period">
                <fieldType>LIST</fieldType>
-               <accountLevel>ServiceTemplate</accountLevel>
-               <appliesTo>ServiceTemplate</appliesTo>
+               <accountLevel>SERVICE</accountLevel>
+               <appliesTo>SERVICE</appliesTo>
                <storageType>SINGLE</storageType>
                <valueRequired>true</valueRequired>
                <versionable>false</versionable>
@@ -60134,8 +61721,8 @@ select
          \r
             <customField code="CF_${#Project#templateCode}_REC_SELECTOR_FLAT_Discount" description="Discounted">
                <fieldType>LIST</fieldType>
-               <accountLevel>ServiceTemplate</accountLevel>
-               <appliesTo>ServiceTemplate</appliesTo>
+               <accountLevel>SERVICE</accountLevel>
+               <appliesTo>SERVICE</appliesTo>
                <storageType>SINGLE</storageType>
                <valueRequired>true</valueRequired>
                <versionable>false</versionable>
@@ -60198,7 +61785,7 @@ select
          \r
          <customField code="CF_${#Project#templateCode}_DISCOUNT_PRICE_REC" description="Discount amount">\r
             <fieldType>DOUBLE</fieldType>\r
-            <appliesTo>ServiceTemplate</appliesTo>\r
+            <appliesTo>SERVICE</appliesTo>\r
             <storageType>SINGLE</storageType>\r
             <valueRequired>true</valueRequired>\r
 		  <defaultValue>0</defaultValue>

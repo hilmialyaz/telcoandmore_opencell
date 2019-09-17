@@ -1,0 +1,36 @@
+version: '2.1'
+services:
+
+  postgres:
+    image: postgres:alpine
+    container_name: postgres-wildfly
+    environment:
+      POSTGRES_USER: opencell_db_user
+      POSTGRES_PASSWORD: opencell_db_password
+      POSTGRES_DB : opencell_db
+      POSTGRES_PORT : 5432
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./input-files/init-user-db.sh:/docker-entrypoint-initdb.d/init-user-db.sh
+      - ./input-files/import-postgres.sql:/docker-entrypoint-initdb.d/import-postgres.sql
+
+  opencell:
+    image: opencell/wildfly-opencell
+    container_name: opencell
+    depends_on:
+      - postgres
+    environment:
+      KEYCLOAK_URL: http://${OPENCELL_HOST:-localhost}:8080/auth
+      SMTP_HOST: my.smtp.host
+      SMTP_PORT: 465
+      SMTP_FROM: no-reply@your-company.com
+      SMTP_USERNAME: username
+      SMTP_PASSWORD: password
+    ports:
+      - "8080:8080"
+      - "8787:8787"
+    volumes:
+      - ./input-files/opencell.war:/opt/jboss/wildfly/standalone/deployments/opencell.war
+      - ./input-files/opencell-admin.properties:/opt/jboss/wildfly/standalone/configuration/opencell-admin.properties
+      - ./input-files/standalone.sh:/opt/jboss/wildfly/bin/standalone.sh

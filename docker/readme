@@ -1,0 +1,5 @@
+docker build -t opencellgts  .
+
+
+icini cikarmak icin
+docker cp 0d72e1490770:/opt/jboss/ /Users/kemal/jboss

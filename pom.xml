@@ -580,7 +580,12 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
-        
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.11.1</version>
+        </dependency>
+
         <!-- Optional, but highly recommended -->
         <!-- Arquillian allows you to test enterprise code such as EJBs and Transactional(JTA) JPA from JUnit/TestNG -->
         <!-- <dependency> -->
@@ -764,10 +769,10 @@
             <properties>
                 <!-- Properties for liquibase plugin. Can be passed from a command line: mvn -Ddb.schema=ten2 -->
                 <db.driver>org.postgresql.Driver </db.driver>
-                <db.url>jdbc:postgresql://localhost/meveo</db.url>
+                <db.url>jdbc:postgresql://localhost/opencell_db</db.url>
                 <db.schema>public</db.schema>
-                <db.username>meveo</db.username>
-                <db.password>meveo</db.password>
+                <db.username>opencell_db_user</db.username>
+                <db.password>opencell_db_password</db.password>
             </properties>
             <dependencies>
                 <!-- Dependency for liquibase plugin -->
