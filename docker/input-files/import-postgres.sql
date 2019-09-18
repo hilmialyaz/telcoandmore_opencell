@@ -12419,3 +12419,173 @@ UPDATE dwh_report_extract SET sql_query = 'SELECT
 
 INSERT INTO databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4150_20190717 - Error while running SALES_JOURNAL report extracts', 'Mohammed_EL-AZZOUZI', 'src/main/db_resources/changelog/current/data.xml', NOW(), 1709, '8:1ffbe86a0489c783b97e2faf4b365d25', 'update tableName=dwh_report_extract', '', 'EXECUTED', NULL, NULL, '3.6.2', '3963549196');
 
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4326_20190530-P::AndriusKarpavicius
+update public.billing_wallet_operation set tax_id = t.id from public.billing_tax t where
+               tax_percent = t.tax_percentage and tax_id is null and tax_percent is not null;
+
+update public.billing_rated_transaction set tax_id = t.id from public.billing_tax t where
+               tax_percent = t.tax_percentage and tax_id is null and tax_percent is not null;
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4326_20190530-P', 'AndriusKarpavicius', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1729, '7:ae4f5a0e308999c8295470a751fa449c', 'sql; sql', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4326_20190530-P::AndriusKarpavicius
+update public.billing_wallet_operation set tax_id = t.id from public.billing_tax t where
+               tax_percent = t.tax_percentage and tax_id is null and tax_percent is not null;
+
+update public.billing_rated_transaction set tax_id = t.id from public.billing_tax t where
+               tax_percent = t.tax_percentage and tax_id is null and tax_percent is not null;
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4326_20190530-P', 'AndriusKarpavicius', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1729, '7:ae4f5a0e308999c8295470a751fa449c', 'sql; sql', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4326_20190530::AndriusKarpavicius
+
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4372_20190715::RedaDebbache
+ALTER TABLE public.crm_custom_field_tmpl ADD unique_constraint INT DEFAULT 0;
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4372_20190715', 'RedaDebbache', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1743, '7:fe74e2be63c7b310301677b1c78fe7b9', 'addColumn tableName=crm_custom_field_tmpl', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4372_20190723::RedaDebbache
+ALTER TABLE public.cust_cet ADD unique_constraint_name VARCHAR(100) DEFAULT '0';
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4372_20190723', 'RedaDebbache', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1744, '7:e57db6681ece559cfc44bc170168f1c2', 'addColumn tableName=cust_cet', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4458_20190626_1::AbdellatifBARI
+ALTER TABLE public.adm_file_format DROP CONSTRAINT uk_9fnf93rp352nkw2kpdbari5xp8;
+
+ALTER TABLE public.adm_file_format DROP COLUMN code;
+
+ALTER TABLE public.adm_file_format DROP COLUMN file_type;
+
+ALTER TABLE public.adm_file_format ADD code VARCHAR(255);
+
+ALTER TABLE public.adm_file_format ADD description VARCHAR(255);
+
+ALTER TABLE public.adm_file_format ADD CONSTRAINT uk_9fnf93rp352nkw2kpdbari4xp9 UNIQUE (code);
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4458_20190626_1', 'AbdellatifBARI', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1745, '7:92b5a84c7a7fc0143f35c80c7b90817f', 'dropUniqueConstraint constraintName=uk_9fnf93rp352nkw2kpdbari5xp8, tableName=adm_file_format; dropColumn tableName=adm_file_format; dropColumn tableName=adm_file_format; addColumn tableName=adm_file_format; addUniqueConstraint constraintName=uk_9f...', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4458_20190626_2::AbdellatifBARI
+CREATE TABLE public.adm_file_format_file_type (file_format_id BIGINT NOT NULL, file_type_id BIGINT NOT NULL);
+
+ALTER TABLE public.adm_file_format_file_type ADD CONSTRAINT adm_file_format_file_type_pkey PRIMARY KEY (file_format_id, file_type_id);
+
+ALTER TABLE public.adm_file_format_file_type ADD CONSTRAINT fk_4au8lqa3bc46gks4dmpbbari4h4l6 FOREIGN KEY (file_format_id) REFERENCES public.adm_file_format (id) ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4458_20190626_2', 'AbdellatifBARI', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1746, '7:03850cc1849d063f0754038a2ecb0aec', 'createTable tableName=adm_file_format_file_type; addPrimaryKey constraintName=adm_file_format_file_type_pkey, tableName=adm_file_format_file_type; addForeignKeyConstraint baseTableName=adm_file_format_file_type, constraintName=fk_4au8lqa3bc46gks4d...', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4458_20190626_4::AbdellatifBARI
+CREATE SEQUENCE public.adm_file_type_seq START WITH 1;
+
+CREATE TABLE public.adm_file_type (id BIGINT NOT NULL, version INT, created TIMESTAMP WITHOUT TIME ZONE NOT NULL, updated TIMESTAMP WITHOUT TIME ZONE, creator VARCHAR(100), updater VARCHAR(100), code VARCHAR(255), description VARCHAR(255), CONSTRAINT adm_file_type_pkey PRIMARY KEY (id));
+
+ALTER TABLE public.adm_file_type ADD CONSTRAINT uk_9fnf93rp352nkw2kpdbari5yr8 UNIQUE (code);
+
+ALTER TABLE public.adm_file_format_file_type ADD CONSTRAINT fk_s1wxui3m4sv9x5mbyi8gpbari77hu FOREIGN KEY (file_type_id) REFERENCES public.adm_file_type (id) ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+CREATE INDEX adm_file_type_code_index ON public.adm_file_type(code);
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4458_20190626_4', 'AbdellatifBARI', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1747, '7:da1c8227f8a14c1130439f5eeb05cfa2', 'createSequence sequenceName=adm_file_type_seq; createTable tableName=adm_file_type; addUniqueConstraint constraintName=uk_9fnf93rp352nkw2kpdbari5yr8, tableName=adm_file_type; addForeignKeyConstraint baseTableName=adm_file_format_file_type, constra...', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4468_20190631_1::AbdellatifBARI
+ALTER TABLE public.flat_file ADD lines_in_success INT;
+
+ALTER TABLE public.flat_file ADD lines_in_warning INT;
+
+ALTER TABLE public.flat_file ADD lines_in_error INT;
+
+ALTER TABLE public.flat_file ADD processing_attempts INT;
+
+ALTER TABLE public.flat_file ADD flat_file_job_code VARCHAR(255);
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4468_20190631_1', 'AbdellatifBARI', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1748, '7:6dd85f7e90a01b6ec08cc7df40ffcc09', 'addColumn tableName=flat_file', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4326_20190709::AndriusKarpavicius
+ALTER TABLE public.billing_wallet_operation DROP CONSTRAINT fk_wallet_operation_rated_transaction;
+
+ALTER TABLE public.billing_rated_transaction DROP CONSTRAINT fk_billing_rated_transaction_rated_transaction;
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4326_20190709', 'AndriusKarpavicius', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1749, '7:39b17e1a0c29c4856b145a0a9497cf0c', 'dropForeignKeyConstraint baseTableName=billing_wallet_operation, constraintName=fk_wallet_operation_rated_transaction; dropForeignKeyConstraint baseTableName=billing_rated_transaction, constraintName=fk_billing_rated_transaction_rated_transaction', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4457_20190728::AndriusKarpavicius
+update public.crm_custom_field_tmpl_val set listvalues='Rollback', listvalues_key='ROLLBACK' where listvalues_key='ROLLBBACK';
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4457_20190728', 'AndriusKarpavicius', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1750, '7:a442d4447d9edddcc9d49397e132aef4', 'sql', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4472_20190807::AndriusKarpavicius
+delete from public.crm_custom_field_tmpl where applies_to='JobInstance_MediationJob';
+
+delete from public.crm_custom_field_tmpl_val where customfieldtemplate_id in (select id from public.crm_custom_field_tmpl where applies_to='JobInstance_FlatFileProcessingJob');
+
+delete from public.crm_custom_field_tmpl_mcols where cft_id in (select id from public.crm_custom_field_tmpl where applies_to='JobInstance_FlatFileProcessingJob');
+
+delete from public.crm_custom_field_tmpl where applies_to='JobInstance_FlatFileProcessingJob';
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4472_20190807', 'AndriusKarpavicius', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1751, '7:cf24a07722b01e85adebb8e4e1ee3dd7', 'sql; sql; sql; sql', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4326_20190811::AndriusKarpavicius
+ALTER TABLE public.billing_invoice ADD prepaid INT DEFAULT 0 NOT NULL;
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4326_20190811', 'AndriusKarpavicius', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1752, '7:52f4bcff91e6503f8f8a39a1afa35d2c', 'addColumn tableName=billing_invoice', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4512_20190819::AbdellatifBARI
+ALTER TABLE public.flat_file DROP COLUMN file_name;
+
+ALTER TABLE public.flat_file ADD file_original_name VARCHAR(255);
+
+ALTER TABLE public.flat_file ADD file_current_name VARCHAR(255);
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4512_20190819', 'AbdellatifBARI', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1753, '7:69c997939b29ae68b37ea6777c43cc86', 'dropColumn tableName=flat_file; addColumn tableName=flat_file', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4480_210819::SaidRamli
+ALTER TABLE public.billing_invoice ADD CONSTRAINT fk_invoice_pm FOREIGN KEY (payment_method_id) REFERENCES public.ar_payment_token (id) ON UPDATE NO ACTION ON DELETE NO ACTION;
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4480_210819', 'SaidRamli', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1754, '7:7b5e0ec8654071aae70d59bfc44ec830', 'addForeignKeyConstraint baseTableName=billing_invoice, constraintName=fk_invoice_pm, referencedTableName=ar_payment_token', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4538_20190829::AbdellatifBARI
+ALTER TABLE public.flat_file ADD current_directory VARCHAR(255);
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4538_20190829', 'AbdellatifBARI', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1755, '7:0a44dc7f82fd5b0b1b246868e92103e7', 'addColumn tableName=flat_file', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4550_20190904::AbdellatifBARI
+ALTER TABLE public.billing_trading_country DROP COLUMN pr_description;
+
+ALTER TABLE public.billing_trading_country ADD code VARCHAR(255);
+
+ALTER TABLE public.billing_trading_country ADD description VARCHAR(255);
+
+ALTER TABLE public.billing_trading_country ADD cf_values_accum TEXT;
+
+ALTER TABLE public.billing_trading_country ADD cf_values TEXT;
+
+ALTER TABLE public.billing_trading_country ADD uuid VARCHAR(60) DEFAULT 'Trading_Country_US' NOT NULL;
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4550_20190904', 'AbdellatifBARI', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1756, '7:eb48ff7e42730e7f39e10d67b653c050', 'dropColumn tableName=billing_trading_country; addColumn tableName=billing_trading_country', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+-- Changeset src/main/db_resources/changelog/current/structure.xml::#4313_17062019::mohamed.el.youssoufi
+ALTER TABLE public.wf_generic_workflow ADD cf_values_accum TEXT;
+
+ALTER TABLE public.wf_generic_workflow ADD cf_values TEXT;
+
+ALTER TABLE public.wf_generic_workflow ADD uuid VARCHAR(60);
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4313_17062019', 'mohamed.el.youssoufi', 'src/main/db_resources/changelog/current/structure.xml', NOW(), 1757, '7:d82384cc31ecc47fe3cc62c5e461899e', 'addColumn tableName=wf_generic_workflow', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+
+-- Changeset src/main/db_resources/changelog/current/data.xml::#4449_20190724::AbdellatifBARI
+INSERT INTO public.ar_occ_template (id, version, created, accounting_code_id, account_code_client_side, code, description, occ_category) VALUES (-44, 0, NOW(), -3, '411000000', 'DBT_TRS', 'Debit for credit transfer', 'DEBIT');
+
+INSERT INTO public.ar_occ_template (id, version, created, accounting_code_id, account_code_client_side, code, description, occ_category) VALUES (-45, 0, NOW(), -3, '411000000', 'CRD_TRS', 'Credit for debit transfer', 'CREDIT');
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4449_20190724', 'AbdellatifBARI', 'src/main/db_resources/changelog/current/data.xml', NOW(), 1769, '7:bcaf829ca909aafb9080a5b37330d61f', 'insert tableName=ar_occ_template; insert tableName=ar_occ_template', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+
+-- Changeset src/main/db_resources/changelog/current/data.xml::#4550_20190904::AbdellatifBARI
+UPDATE public.billing_trading_country SET code = 'US', description = 'United States', uuid = 'Trading_Country_US' WHERE id=-1;
+
+UPDATE public.billing_trading_country SET code = 'FR', description = 'France', uuid = 'Trading_Country_FR' WHERE id=-2;
+
+INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4550_20190904', 'AbdellatifBARI', 'src/main/db_resources/changelog/current/data.xml', NOW(), 1770, '7:9bb2a98c9523c04092b2ae6b7c2746c0', 'update tableName=billing_trading_country; update tableName=billing_trading_country', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
