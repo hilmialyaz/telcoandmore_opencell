@@ -1,0 +1,10 @@
+
+mvn liquibase:updateSQL
+bu sadece diffi cikartmiyor o yuzden once update edip asagidaki kodla
+mvn -Pdevelopment liquibase:update
+
+select * from databasechangelog aa order by aa.orderexecuted desc
+
+idler yukardaki migrate sql lerinden ayiklanip import-postgres e grup grup yapistirilir
+
+

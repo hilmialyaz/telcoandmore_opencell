@@ -3,3 +3,13 @@ docker build -t opencellgts  .
 
 icini cikarmak icin
 docker cp 0d72e1490770:/opt/jboss/ /Users/kemal/jboss
+
+
+git clone https://github.com/hilmialyaz/telcoandmore_opencell
+cd telcoandmore_opencell/
+git fetch origin
+git branch 8.X  origin/8.X
+git checkout 8.X
+git pull
+cd docker
+docker-compose up -d
