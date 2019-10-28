@@ -13,3 +13,9 @@ git checkout 8.X
 git pull
 cd docker
 docker-compose up -d
+
+
+
+docker rm -v postgres-wildfly
+docker rm -v opencell
+docker-compose up -d --force-recreate
