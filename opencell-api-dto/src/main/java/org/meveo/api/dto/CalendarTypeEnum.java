@@ -41,7 +41,9 @@ public enum CalendarTypeEnum {
     /**
      * A union of two calendars. A union of calendars "Monday-Tuesday" and "Tuesday-Friday" would result in "Monday-Friday" time range
      */
-    BANKING;
+    BANKING,
+
+    TMJOIN;
 
     /**
      * Checks if is join.

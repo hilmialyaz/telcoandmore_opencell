@@ -55,15 +55,15 @@ public class CalendarJoin extends Calendar {
 
     @Column(name = "join_type")
     @Enumerated(EnumType.STRING)
-    private CalendarJoinTypeEnum joinType;
+    protected CalendarJoinTypeEnum joinType;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "join_cal_1_id")
-    private Calendar joinCalendar1;
+    protected Calendar joinCalendar1;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "join_cal_2_id")
-    private Calendar joinCalendar2;
+    protected Calendar joinCalendar2;
 
     public CalendarJoinTypeEnum getJoinType() {
         return joinType;
@@ -152,6 +152,9 @@ public class CalendarJoin extends Calendar {
 
         Date date1 = joinCalendar1.previousCalendarDate(date);
         Date date2 = joinCalendar2.previousCalendarDate(date);
+
+        //Date date2 = joinCalendar2.previousCalendarDate2(date);
+
 
         if (date1 == null && date2 == null) {
             return null;
@@ -309,4 +312,7 @@ public class CalendarJoin extends Calendar {
     public String getCalendarTypeWSubtypes() {
         return joinType.name();
     }
+
+
+
 }

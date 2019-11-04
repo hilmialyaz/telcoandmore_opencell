@@ -39,6 +39,7 @@ import org.meveo.admin.exception.BusinessException;
 import org.meveo.admin.exception.IncorrectChargeInstanceException;
 import org.meveo.admin.exception.IncorrectChargeTemplateException;
 import org.meveo.admin.exception.InsufficientBalanceException;
+import org.meveo.api.dto.CalendarTypeEnum;
 import org.meveo.api.dto.billing.WalletOperationDto;
 import org.meveo.cache.WalletCacheContainerProvider;
 import org.meveo.commons.utils.QueryBuilder;
@@ -66,14 +67,7 @@ import org.meveo.model.billing.UserAccount;
 import org.meveo.model.billing.WalletInstance;
 import org.meveo.model.billing.WalletOperation;
 import org.meveo.model.billing.WalletOperationStatusEnum;
-import org.meveo.model.catalog.Calendar;
-import org.meveo.model.catalog.ChargeTemplate;
-import org.meveo.model.catalog.LevelEnum;
-import org.meveo.model.catalog.OfferTemplate;
-import org.meveo.model.catalog.OneShotChargeTemplate;
-import org.meveo.model.catalog.RecurringChargeTemplate;
-import org.meveo.model.catalog.RoundingModeEnum;
-import org.meveo.model.catalog.WalletTemplate;
+import org.meveo.model.catalog.*;
 import org.meveo.model.crm.Customer;
 import org.meveo.model.order.Order;
 import org.meveo.model.payments.CustomerAccount;
@@ -864,23 +858,36 @@ public class WalletOperationService extends BusinessService<WalletOperation> {
             ApplicationTypeEnum applicationTypeEnum = ApplicationTypeEnum.RECURRENT;
 
             // Apply prorated the first charge only
-            if (isSubscriptionProrata && chargeInstance.getWalletOperations().isEmpty()) {
-
-                Date previousChargeDate = cal.previousCalendarDate(applyChargeFromDate);
-
+            if (isSubscriptionProrata) {
                 applicationTypeEnum = ApplicationTypeEnum.PRORATA_SUBSCRIPTION;
                 double prorataRatio = 1.0;
-                double part1 = DateUtils.daysBetween(applyChargeOnDate, nextChargeDate);
-                double part2 = DateUtils.daysBetween(previousChargeDate, nextChargeDate);
+                Date previousChargeDate = cal.previousCalendarDate(applyChargeFromDate);
 
-                if (part2 > 0) {
-                    prorataRatio = part1 / part2;
-                } else {
-                    log.error("Error in calendar dates charge id={} : chargeDate={}, nextChargeDate={}, previousChargeDate={}", chargeInstance.getId(), applyChargeOnDate,
-                        nextChargeDate, previousChargeDate);
+
+                CalendarTypeEnum calendarType = CalendarTypeEnum.valueOf(cal.getCalendarType());
+
+                if (calendarType != CalendarTypeEnum.TMJOIN) {
+                    double part1 = DateUtils.daysBetween(applyChargeOnDate, nextChargeDate);
+                    double part2 = DateUtils.daysBetween(previousChargeDate, nextChargeDate);
+
+                    if (part2 > 0) {
+                        prorataRatio = part1 / part2;
+                    } else {
+                        log.error("Error in calendar dates charge id={} : chargeDate={}, nextChargeDate={}, previousChargeDate={}", chargeInstance.getId(), applyChargeOnDate,
+                                nextChargeDate, previousChargeDate);
+                    }
+                }else{
+                    double part1 = DateUtils.daysBetween(applyChargeOnDate, nextChargeDate);
+                    double part2 = cal.getMaxRange(applyChargeOnDate);
+
+                    if (part2 > 0) {
+                        prorataRatio = part1 / part2;
+                    } else {
+                        log.error("Error in calendar dates charge id={} : chargeDate={}, nextChargeDate={}, previousChargeDate={}", chargeInstance.getId(), applyChargeOnDate,
+                                nextChargeDate, previousChargeDate);
+                    }
                 }
                 inputQuantity = inputQuantity.multiply(new BigDecimal(prorataRatio + ""));
-                log.debug("Recuring charge id={} will be rated with prorata {}/{}={} -> quantity={}", chargeInstance.getId(), part1, part2, prorataRatio, inputQuantity);
             }
 
             if (reimbursement) {
