@@ -27,6 +27,8 @@ public class TerminationReasonDto extends BusinessEntityDto {
     /** The apply termination charges. */
     private boolean applyTerminationCharges;
 
+    private boolean applyAgreementExtension;
+
     /**
      * Instantiates a new termination reason dto.
      */
@@ -44,6 +46,7 @@ public class TerminationReasonDto extends BusinessEntityDto {
         applyAgreement = subscriptionTerminationReason.isApplyAgreement();
         applyReimbursment = subscriptionTerminationReason.isApplyReimbursment();
         applyTerminationCharges = subscriptionTerminationReason.isApplyTerminationCharges();
+        applyAgreementExtension = subscriptionTerminationReason.isApplyAgreementExtension();
     }
 
     /**
@@ -98,6 +101,14 @@ public class TerminationReasonDto extends BusinessEntityDto {
      */
     public void setApplyTerminationCharges(boolean applyTerminationCharges) {
         this.applyTerminationCharges = applyTerminationCharges;
+    }
+
+    public boolean isApplyAgreementExtension() {
+        return applyAgreementExtension;
+    }
+
+    public void setApplyAgreementExtension(boolean applyAgreementExtension) {
+        this.applyAgreementExtension = applyAgreementExtension;
     }
 
     @Override

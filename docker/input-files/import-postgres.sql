@@ -12589,3 +12589,5 @@ UPDATE public.billing_trading_country SET code = 'US', description = 'United Sta
 UPDATE public.billing_trading_country SET code = 'FR', description = 'France', uuid = 'Trading_Country_FR' WHERE id=-2;
 
 INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4550_20190904', 'AbdellatifBARI', 'src/main/db_resources/changelog/current/data.xml', NOW(), 1770, '7:9bb2a98c9523c04092b2ae6b7c2746c0', 'update tableName=billing_trading_country; update tableName=billing_trading_country', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
+
+alter table billing_subscrip_termin_reason add apply_agreement_extension int4;
