@@ -32,17 +32,7 @@ import org.meveo.admin.exception.BusinessException;
 import org.meveo.commons.utils.QueryBuilder;
 import org.meveo.commons.utils.StringUtils;
 import org.meveo.event.qualifier.Rejected;
-import org.meveo.model.billing.BillingWalletTypeEnum;
-import org.meveo.model.billing.CounterInstance;
-import org.meveo.model.billing.InstanceStatusEnum;
-import org.meveo.model.billing.RatingStatus;
-import org.meveo.model.billing.RatingStatusEnum;
-import org.meveo.model.billing.RecurringChargeInstance;
-import org.meveo.model.billing.ServiceInstance;
-import org.meveo.model.billing.Subscription;
-import org.meveo.model.billing.SubscriptionStatusEnum;
-import org.meveo.model.billing.WalletInstance;
-import org.meveo.model.billing.WalletOperation;
+import org.meveo.model.billing.*;
 import org.meveo.model.catalog.RecurringChargeTemplate;
 import org.meveo.model.catalog.ServiceChargeTemplateRecurring;
 import org.meveo.model.catalog.WalletTemplate;
@@ -236,9 +226,11 @@ public class RecurringChargeInstanceService extends BusinessService<RecurringCha
         log.debug("recurringChargeSuspension : recurringChargeInstanceId={},ChargeApplications size={}", recurringChargeInstance.getId(),
             recurringChargeInstance.getWalletOperations().size());
 
+        if (terminationDate.after(recurringChargeInstance.getChargeDate())) {
+            walletOperationService.applyChargeAgreement(recurringChargeInstance, recurringChargeInstance.getRecurringChargeTemplate(), terminationDate);
+        }
         recurringChargeInstance.setStatus(InstanceStatusEnum.SUSPENDED);
         update(recurringChargeInstance);
-
     }
 
     public void recurringChargeReactivation(ServiceInstance serviceInst, Subscription subscription, Date subscriptionDate) throws BusinessException {

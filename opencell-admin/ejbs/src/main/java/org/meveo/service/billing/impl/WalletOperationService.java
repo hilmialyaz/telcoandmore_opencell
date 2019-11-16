@@ -83,6 +83,7 @@ import org.meveo.service.catalog.impl.OfferTemplateService;
 import org.meveo.service.catalog.impl.OneShotChargeTemplateService;
 import org.meveo.service.catalog.impl.RecurringChargeTemplateService;
 import org.meveo.service.catalog.impl.TaxService;
+import org.meveo.service.crm.impl.CustomFieldInstanceService;
 
 /**
  * Service class for WalletOperation entity
@@ -138,6 +139,9 @@ public class WalletOperationService extends BusinessService<WalletOperation> {
 
     @Inject
     private WalletTemplateService walletTemplateService;
+
+    @Inject
+    private CustomFieldInstanceService customFieldInstanceService;
 
     public BigDecimal getRatedAmount(Seller seller, Customer customer, CustomerAccount customerAccount, BillingAccount billingAccount, UserAccount userAccount, Date startDate,
             Date endDate, boolean amountWithTax) {
@@ -444,18 +448,11 @@ public class WalletOperationService extends BusinessService<WalletOperation> {
 
         if (isSubscriptionProrata) {
 
-            double prorataRatio = 1.0;
-            double part1 = DateUtils.daysBetween(applyChargeOnDate, nextChargeDate);
-            double part2 = DateUtils.daysBetween(previousChargeDate, nextChargeDate);
-            if (part2 > 0) {
-                prorataRatio = part1 / part2;
-            } else {
-                log.error("Error in calendar dates charge id={} : chargeDate={}, nextChargeDate={}, previousChargeDate={}", chargeInstance.getId(), applyChargeOnDate,
-                    nextChargeDate, previousChargeDate);
-            }
+
+
+            double prorataRatio = getProrataRatio(chargeInstance, cal, applyChargeOnDate, nextChargeDate, previousChargeDate);
 
             inputQuantity = inputQuantity.multiply(new BigDecimal(prorataRatio + ""));
-            log.debug("Recuring charge id={} will be rated with prorata {}/{}={} -> quantity={}", chargeInstance.getId(), part1, part2, prorataRatio, inputQuantity);
         }
 
         Tax tax = invoiceSubCategoryCountryService.determineTax(chargeInstance, applyChargeOnDate);
@@ -814,7 +811,10 @@ public class WalletOperationService extends BusinessService<WalletOperation> {
         if (!StringUtils.isBlank(recurringChargeTemplate.getCalendarCodeEl())) {
             cal = recurringChargeTemplateService.getCalendarFromEl(recurringChargeTemplate.getCalendarCodeEl(), chargeInstance.getServiceInstance(), recurringChargeTemplate);
         }
-        cal.setInitDate(chargeInstance.getSubscriptionDate());
+
+        Double cfTotalSuspensionDays = (Double)customFieldInstanceService.getCFValue(chargeInstance.getSubscription(), "CF_TOTAL_SUSPENSION_DAYS");
+        Date subsDatePlusSuspensionDate = DateUtils.addDaysToDate(chargeInstance.getSubscriptionDate(), cfTotalSuspensionDays.intValue());
+        cal.setInitDate(subsDatePlusSuspensionDate);
 
         // For non-reimbursement it will cover only one calendar period cycle
         Date applyChargeFromDate = chargeInstance.getChargeDate(); // Charge date is already truncated based on calendar, so no need to truncate here again
@@ -860,33 +860,10 @@ public class WalletOperationService extends BusinessService<WalletOperation> {
             // Apply prorated the first charge only
             if (isSubscriptionProrata) {
                 applicationTypeEnum = ApplicationTypeEnum.PRORATA_SUBSCRIPTION;
-                double prorataRatio = 1.0;
+
                 Date previousChargeDate = cal.previousCalendarDate(applyChargeFromDate);
 
-
-                CalendarTypeEnum calendarType = CalendarTypeEnum.valueOf(cal.getCalendarType());
-
-                if (calendarType != CalendarTypeEnum.TMJOIN) {
-                    double part1 = DateUtils.daysBetween(applyChargeOnDate, nextChargeDate);
-                    double part2 = DateUtils.daysBetween(previousChargeDate, nextChargeDate);
-
-                    if (part2 > 0) {
-                        prorataRatio = part1 / part2;
-                    } else {
-                        log.error("Error in calendar dates charge id={} : chargeDate={}, nextChargeDate={}, previousChargeDate={}", chargeInstance.getId(), applyChargeOnDate,
-                                nextChargeDate, previousChargeDate);
-                    }
-                }else{
-                    double part1 = DateUtils.daysBetween(applyChargeOnDate, nextChargeDate);
-                    double part2 = cal.getMaxRange(applyChargeOnDate);
-
-                    if (part2 > 0) {
-                        prorataRatio = part1 / part2;
-                    } else {
-                        log.error("Error in calendar dates charge id={} : chargeDate={}, nextChargeDate={}, previousChargeDate={}", chargeInstance.getId(), applyChargeOnDate,
-                                nextChargeDate, previousChargeDate);
-                    }
-                }
+                double prorataRatio = getProrataRatio(chargeInstance, cal, applyChargeOnDate, nextChargeDate, previousChargeDate);
                 inputQuantity = inputQuantity.multiply(new BigDecimal(prorataRatio + ""));
             }
 
@@ -926,6 +903,33 @@ public class WalletOperationService extends BusinessService<WalletOperation> {
         chargeInstance.setNextChargeDate(nextChargeDate);
 
         return walletOperations;
+    }
+
+    private double getProrataRatio(RecurringChargeInstance chargeInstance, Calendar cal, Date applyChargeOnDate, Date nextChargeDate,  Date previousChargeDate) {
+        CalendarTypeEnum calendarType = CalendarTypeEnum.valueOf(cal.getCalendarType());
+        double prorataRatio = 1.0;
+        if (calendarType != CalendarTypeEnum.TMJOIN) {
+            double part1 = DateUtils.daysBetween(applyChargeOnDate, nextChargeDate);
+            double part2 = DateUtils.daysBetween(previousChargeDate, nextChargeDate);
+
+            if (part2 > 0) {
+                prorataRatio = part1 / part2;
+            } else {
+                log.error("Error in calendar dates charge id={} : chargeDate={}, nextChargeDate={}, previousChargeDate={}", chargeInstance.getId(), applyChargeOnDate,
+                        nextChargeDate, previousChargeDate);
+            }
+        }else{
+            double part1 = DateUtils.daysBetween(applyChargeOnDate, nextChargeDate);
+            double part2 = cal.getMaxRange(applyChargeOnDate);
+
+            if (part2 > 0) {
+                prorataRatio = part1 / part2;
+            } else {
+                log.error("Error in calendar dates charge id={} : chargeDate={}, nextChargeDate={}, previousChargeDate={}", chargeInstance.getId(), applyChargeOnDate,
+                        nextChargeDate, previousChargeDate);
+            }
+        }
+        return prorataRatio;
     }
 
     /**

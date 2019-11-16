@@ -69,6 +69,7 @@ import org.meveo.model.shared.DateUtils;
 import org.meveo.service.audit.AuditableFieldService;
 import org.meveo.service.base.BusinessService;
 import org.meveo.service.catalog.impl.OfferTemplateService;
+import org.meveo.service.crm.impl.CustomFieldInstanceService;
 import org.meveo.service.medina.impl.AccessService;
 import org.meveo.service.order.OrderHistoryService;
 import org.meveo.service.script.offer.OfferModelScriptService;
@@ -104,6 +105,9 @@ public class SubscriptionService extends BusinessService<Subscription> {
 
     @Inject
     private AuditableFieldService auditableFieldService;
+
+    @Inject
+    private CustomFieldInstanceService customFieldInstanceService;
 
     @MeveoAudit
     @Override
@@ -205,9 +209,17 @@ public class SubscriptionService extends BusinessService<Subscription> {
             throw new ElementNotResiliatedOrCanceledException("subscription", subscription.getCode());
         }
 
+        double daysBetween = DateUtils.daysBetween(subscription.getTerminationDate(), reactivationDate);
+
+        Object cfTotalSuspensionDays = customFieldInstanceService.getCFValue(subscription, "CF_TOTAL_SUSPENSION_DAYS");
+        if(cfTotalSuspensionDays!=null) daysBetween = daysBetween+ ((double)cfTotalSuspensionDays);
+        customFieldInstanceService.setCFValue(subscription, "CF_TOTAL_SUSPENSION_DAYS", daysBetween );
+
+
         subscription.setTerminationDate(null);
         subscription.setSubscriptionTerminationReason(null);
         subscription.setStatus(SubscriptionStatusEnum.ACTIVE);
+
 
         List<ServiceInstance> serviceInstances = subscription.getServiceInstances();
         for (ServiceInstance serviceInstance : serviceInstances) {

@@ -39,19 +39,19 @@ public class CalendarTMJoin extends CalendarJoin {
 
 
     public Date getYearlyNextDate(Date date){
-        return joinCalendar1 instanceof CalendarYearly ? joinCalendar1.nextCalendarDate(date) : joinCalendar2.nextCalendarDate(date);
+        return "YEARLY".equals(joinCalendar1.getCalendarType()) ? joinCalendar1.nextCalendarDate(date) : joinCalendar2.nextCalendarDate(date);
     }
 
     public Date getPeriodNextDate(Date date){
-        return joinCalendar2 instanceof CalendarPeriod ? joinCalendar2.nextCalendarDate(date) : joinCalendar1.nextCalendarDate(date);
+        return "PERIOD".equals(joinCalendar2.getCalendarType()) ? joinCalendar2.nextCalendarDate(date) : joinCalendar1.nextCalendarDate(date);
     }
 
     public Date getYearlyPrevious(Date date){
-        return joinCalendar1 instanceof CalendarYearly ? joinCalendar1.previousCalendarDate(date) : joinCalendar2.previousCalendarDate(date);
+        return "YEARLY".equals(joinCalendar1.getCalendarType()) ? joinCalendar1.previousCalendarDate(date) : joinCalendar2.previousCalendarDate(date);
     }
 
     public Date getPeriodPreviousDate(Date date){
-        return joinCalendar2 instanceof CalendarPeriod ? joinCalendar2.previousCalendarDate(date) : joinCalendar1.previousCalendarDate(date);
+        return "PERIOD".equals(joinCalendar2.getCalendarType()) ? joinCalendar2.previousCalendarDate(date) : joinCalendar1.previousCalendarDate(date);
     }
 
     @Override

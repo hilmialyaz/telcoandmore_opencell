@@ -1141,9 +1141,10 @@ public class CalendarTest {
         }
         calendar1.setDays(days);
 
-
+        calendar1.setCalendarType("YEARLY");
 
         CalendarPeriod calendar2 = new CalendarPeriod();
+        calendar2.setCalendarType("PERIOD");
         calendar2.setNbPeriods(2);
         calendar2.setPeriodLength(1);
         calendar2.setPeriodUnit(java.util.Calendar.MONTH);
