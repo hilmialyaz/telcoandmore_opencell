@@ -1501,4 +1501,12 @@
 		</addColumn>
 	</changeSet>
 
+
+    <changeSet id="#4313_17062222" author="kemal">
+        <addColumn tableName="billing_subscrip_termin_reason">
+            <column name="apply_reimbursment" type="${type.boolean}" defaultValueNumeric="0">
+            </column>
+        </addColumn>
+    </changeSet>
+
 </databaseChangeLog>

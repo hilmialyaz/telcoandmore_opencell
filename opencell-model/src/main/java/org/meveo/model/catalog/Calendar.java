@@ -135,4 +135,7 @@ public abstract class Calendar extends BusinessEntity {
     public Date truncateDateTime(Date dateToTruncate) {
         return dateToTruncate;
     }
+
+
+    public double getMaxRange(Date date){return 0;}
 }

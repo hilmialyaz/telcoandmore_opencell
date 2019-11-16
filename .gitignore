@@ -20,6 +20,7 @@ tomcat
 *.zip
 *.ear
 *.sar
+*.war
 *.class
 
 # Maven 

@@ -28,6 +28,9 @@ public class OperationSubscriptionRequestDto extends BaseEntityDto {
     /** The action date. */
     private Date actionDate;
 
+    @XmlElement(required = true)
+    private String terminationReason;
+
     /**
      * Gets the subscription code.
      *
@@ -69,4 +72,12 @@ public class OperationSubscriptionRequestDto extends BaseEntityDto {
         return "OperationSubscriptionRequestDto  [subscriptionCode=" + subscriptionCode + ", actionDate=" + actionDate + "]";
     }
 
+
+    public String getTerminationReason() {
+        return terminationReason;
+    }
+
+    public void setTerminationReason(String terminationReason) {
+        this.terminationReason = terminationReason;
+    }
 }
