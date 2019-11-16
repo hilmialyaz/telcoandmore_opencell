@@ -12591,3 +12591,19 @@ UPDATE public.billing_trading_country SET code = 'FR', description = 'France', u
 INSERT INTO public.databasechangelog (ID, AUTHOR, FILENAME, DATEEXECUTED, ORDEREXECUTED, MD5SUM, DESCRIPTION, COMMENTS, EXECTYPE, CONTEXTS, LABELS, LIQUIBASE, DEPLOYMENT_ID) VALUES ('#4550_20190904', 'AbdellatifBARI', 'src/main/db_resources/changelog/current/data.xml', NOW(), 1770, '7:9bb2a98c9523c04092b2ae6b7c2746c0', 'update tableName=billing_trading_country; update tableName=billing_trading_country', '', 'EXECUTED', NULL, NULL, '3.5.3', '8820967606');
 
 alter table billing_subscrip_termin_reason add apply_agreement_extension int4;
+
+
+INSERT INTO billing_subscrip_termin_reason (id, version, apply_agreement, apply_reimbursment, apply_termination_charges, code, description, created, apply_agreement_extension)
+VALUES (-11, 0, 0, 0, 0, 'NEW_ACTIVATION', 'Yeni Aktivasyon', current_date, 0);
+
+INSERT INTO billing_subscrip_termin_reason (id, version, apply_agreement, apply_reimbursment, apply_termination_charges, code, description, created, apply_agreement_extension)
+VALUES (-12, 0, 0, 0, 0, 'FREEZE', 'Hat Dondurma', current_date, 1);
+
+INSERT INTO billing_subscrip_termin_reason (id, version, apply_agreement, apply_reimbursment, apply_termination_charges, code, description, created, apply_agreement_extension)
+VALUES (-13, 0, 0, 0, 0, 'TRANSFER', 'Nakil', current_date, 0);
+
+INSERT INTO billing_subscrip_termin_reason (id, version, apply_agreement, apply_reimbursment, apply_termination_charges, code, description, created, apply_agreement_extension)
+VALUES (-14, 0, 1, 0, 0, 'MUSTERI_TALEBI', 'Müşteri Talebi', current_date, 0);
+
+
+

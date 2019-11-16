@@ -1,8 +1,5 @@
 package org.meveo.admin.job;
 
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
@@ -23,7 +20,6 @@ import org.meveo.model.billing.SubscriptionRenewal;
 import org.meveo.model.billing.SubscriptionRenewal.EndOfTermActionEnum;
 import org.meveo.model.billing.SubscriptionStatusEnum;
 import org.meveo.model.jobs.JobExecutionResultImpl;
-import org.meveo.model.shared.DateUtils;
 import org.meveo.service.billing.impl.ServiceInstanceService;
 import org.meveo.service.billing.impl.SubscriptionService;
 import org.slf4j.Logger;
@@ -98,9 +94,8 @@ public class SubscriptionStatusJobBean extends BaseJobBean {
 					}
 
 				} else if (subscription.getSubscriptionRenewal().getEndOfTermAction() == EndOfTermActionEnum.SUSPEND) {
-					subscriptionService.subscriptionSuspension(subscription,
-							subscription.getSubscribedTillDate());
-
+					subscriptionService.subscriptionSuspension(subscription,subscription.getSubscribedTillDate(), null);
+					//TODO buraya reason gelecek.
 				} else if (subscription.getSubscriptionRenewal()
 						.getEndOfTermAction() == EndOfTermActionEnum.TERMINATE) {
 					subscriptionService.terminateSubscription(subscription,

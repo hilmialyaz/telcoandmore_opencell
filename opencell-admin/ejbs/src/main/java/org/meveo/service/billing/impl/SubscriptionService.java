@@ -164,7 +164,7 @@ public class SubscriptionService extends BusinessService<Subscription> {
     }
 
     @MeveoAudit
-    public Subscription subscriptionSuspension(Subscription subscription, Date suspensionDate)
+    public Subscription subscriptionSuspension(Subscription subscription, Date suspensionDate, SubscriptionTerminationReason subscriptionTerminationReason)
             throws IncorrectSusbcriptionException, IncorrectServiceInstanceException, BusinessException {
         if (suspensionDate == null) {
             suspensionDate = new Date();
@@ -186,6 +186,7 @@ public class SubscriptionService extends BusinessService<Subscription> {
             }
         }
 
+        subscription.setSubscriptionTerminationReason(subscriptionTerminationReason);
         subscription.setTerminationDate(suspensionDate);
         subscription.setStatus(SubscriptionStatusEnum.SUSPENDED);
         subscription = update(subscription);
@@ -211,10 +212,11 @@ public class SubscriptionService extends BusinessService<Subscription> {
 
         double daysBetween = DateUtils.daysBetween(subscription.getTerminationDate(), reactivationDate);
 
-        Object cfTotalSuspensionDays = customFieldInstanceService.getCFValue(subscription, "CF_TOTAL_SUSPENSION_DAYS");
-        if(cfTotalSuspensionDays!=null) daysBetween = daysBetween+ ((double)cfTotalSuspensionDays);
-        customFieldInstanceService.setCFValue(subscription, "CF_TOTAL_SUSPENSION_DAYS", daysBetween );
-
+        if(subscription.getSubscriptionTerminationReason()!=null && subscription.getSubscriptionTerminationReason().isApplyAgreementExtension()){
+            Object cfTotalSuspensionDays = customFieldInstanceService.getCFValue(subscription, "CF_TOTAL_SUSPENSION_DAYS");
+            if(cfTotalSuspensionDays!=null) daysBetween = daysBetween+ ((double)cfTotalSuspensionDays);
+            customFieldInstanceService.setCFValue(subscription, "CF_TOTAL_SUSPENSION_DAYS", daysBetween );
+        }
 
         subscription.setTerminationDate(null);
         subscription.setSubscriptionTerminationReason(null);

@@ -25,30 +25,7 @@ import org.meveo.api.dto.account.ApplyOneShotChargeInstanceRequestDto;
 import org.meveo.api.dto.account.ApplyProductRequestDto;
 import org.meveo.api.dto.account.FilterProperty;
 import org.meveo.api.dto.account.FilterResults;
-import org.meveo.api.dto.billing.ActivateServicesRequestDto;
-import org.meveo.api.dto.billing.ChargeInstanceOverrideDto;
-import org.meveo.api.dto.billing.DiscountPlanInstanceDto;
-import org.meveo.api.dto.billing.DueDateDelayDto;
-import org.meveo.api.dto.billing.InstantiateServicesRequestDto;
-import org.meveo.api.dto.billing.OneShotChargeInstanceDto;
-import org.meveo.api.dto.billing.OperationServicesRequestDto;
-import org.meveo.api.dto.billing.ProductDto;
-import org.meveo.api.dto.billing.ProductInstanceDto;
-import org.meveo.api.dto.billing.RateSubscriptionRequestDto;
-import org.meveo.api.dto.billing.ServiceInstanceDto;
-import org.meveo.api.dto.billing.ServiceToActivateDto;
-import org.meveo.api.dto.billing.ServiceToInstantiateDto;
-import org.meveo.api.dto.billing.ServiceToUpdateDto;
-import org.meveo.api.dto.billing.SubscriptionAndServicesToActivateRequestDto;
-import org.meveo.api.dto.billing.SubscriptionDto;
-import org.meveo.api.dto.billing.SubscriptionForCustomerRequestDto;
-import org.meveo.api.dto.billing.SubscriptionForCustomerResponseDto;
-import org.meveo.api.dto.billing.SubscriptionRenewalDto;
-import org.meveo.api.dto.billing.SubscriptionsDto;
-import org.meveo.api.dto.billing.TerminateSubscriptionRequestDto;
-import org.meveo.api.dto.billing.TerminateSubscriptionServicesRequestDto;
-import org.meveo.api.dto.billing.UpdateServicesRequestDto;
-import org.meveo.api.dto.billing.WalletOperationDto;
+import org.meveo.api.dto.billing.*;
 import org.meveo.api.dto.catalog.DiscountPlanDto;
 import org.meveo.api.dto.catalog.OneShotChargeTemplateDto;
 import org.meveo.api.dto.response.PagingAndFiltering;
@@ -1487,16 +1464,29 @@ public class SubscriptionApi extends BaseApi {
     /**
      * Suspend subscription
      *
-     * @param subscriptionCode subscription code
-     * @param suspensionDate suspension date
+     * @param postData subscription code
      * @throws MissingParameterException Missing parameter exception
      * @throws EntityDoesNotExistsException Entity does not exists exception
      * @throws IncorrectSusbcriptionException Incorrect susbcription exception
      * @throws IncorrectServiceInstanceException Incorrect service instance exception
      * @throws BusinessException Business exception
      */
-    public void suspendSubscription(String subscriptionCode, Date suspensionDate)
+    public void suspendSubscription(OperationSubscriptionRequestDto postData)
             throws MissingParameterException, EntityDoesNotExistsException, IncorrectSusbcriptionException, IncorrectServiceInstanceException, BusinessException {
+        String subscriptionCode = postData.getSubscriptionCode();
+        Date suspensionDate = postData.getActionDate();
+        String terminationReason = postData.getTerminationReason();
+
+
+        SubscriptionTerminationReason subscriptionTerminationReason = null ;
+
+        if (!StringUtils.isBlank(terminationReason)) {
+            subscriptionTerminationReason = terminationReasonService.findByCode(postData.getTerminationReason());
+            if (subscriptionTerminationReason == null) {
+                throw new EntityDoesNotExistsException(SubscriptionTerminationReason.class, postData.getTerminationReason());
+            }
+        }
+
         if (StringUtils.isBlank(subscriptionCode)) {
             missingParameters.add("subscriptionCode");
             handleMissingParameters();
@@ -1505,7 +1495,7 @@ public class SubscriptionApi extends BaseApi {
         if (subscription == null) {
             throw new EntityDoesNotExistsException(Subscription.class, subscriptionCode);
         }
-        subscriptionService.subscriptionSuspension(subscription, suspensionDate);
+        subscriptionService.subscriptionSuspension(subscription, suspensionDate, subscriptionTerminationReason);
     }
 
     /**
