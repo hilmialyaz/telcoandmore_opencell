@@ -22,7 +22,7 @@
         <env>dev</env>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <version.keycloak>2.5.5.Final</version.keycloak>
+        <version.keycloak>9.0.3</version.keycloak>
         <version.pdfbox>2.0.11</version.pdfbox>
         <version.barcode>2.1</version.barcode>
 
